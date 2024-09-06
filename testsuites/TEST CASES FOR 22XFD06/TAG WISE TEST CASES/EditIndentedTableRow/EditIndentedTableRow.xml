@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<!-- <Login password="$csv{password}" username="$csv{username}"/>
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToParentWindow/>
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="slideInFrame"/>
+	<ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+	<SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+	<EditIndentedTableRow position="3" refid="IT1" action="text" id="IT1TextInput" insideFreezePane="true" input="100" select="true"/>
+	<wait time="3000"/> -->
+	
+	<!-- <Login password="$csv{password}" username="$csv{username}"/>
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow/>
+	<ClickElement locatorType="id" locatorExpression="AutoNameSeriesId"/>
+	<InputText locatorType="id" locatorExpression="Name" input="SkateBoard190"/>
+	<InputText locatorType="id" locatorExpression="VPMProductName1" input=" Assembly"/>
+	<SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+	<SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+	<ClickElement locatorType="id" locatorExpression="Weight"/> 
+	<InputText locatorType="id" locatorExpression="Weight" input="500"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	
+	CREATE EBOM 
+	<Wait time="5000"/>
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="slideInFrame"/>
+	<ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+	<SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+	<SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+	<InputText locatorType="id" locatorExpression="NoOfParts" input="5"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<wait time="3000"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+	<Wait time="1000"/>
+	<SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+	<Wait time="3000"/>
+	<EditIndentedTableRow position="3" refid="IT1" action="text" id="IT1TextInput" insideFreezePane="true"/>
+	<EditIndentedTableRow position="4" refid="IT1" action="text" id="IT1TextInput1" insideFreezePane="true"/>
+	<EditIndentedTableRow position="11" refid="IT1" action="text" id="IT1TextInput2" insideFreezePane="false"/>
+	
+	<SelectIndentedTableRow expand="false" id="IT2" criteria="level" />
+	<EditIndentedTableRow position="3" refid="IT2" action="text" id="IT2TextInput" insideFreezePane="true"/>
+	<EditIndentedTableRow position="4" refid="IT2" action="text" id="IT2TextInput1" insideFreezePane="true"/>
+	<EditIndentedTableRow position="11" refid="IT2" action="text" id="IT2TextInput2" insideFreezePane="false"/>
+	
+	<SelectIndentedTableRow expand="false" id="IT3" criteria="level" />
+	<EditIndentedTableRow position="3" refid="IT3" action="text" id="IT3TextInput" insideFreezePane="true"/>
+	<EditIndentedTableRow position="4" refid="IT3" action="text" id="IT3TextInput1" insideFreezePane="true"/>
+	<EditIndentedTableRow position="11" refid="IT3" action="text" id="IT3TextInput2" insideFreezePane="false"/>
+	
+	<SelectIndentedTableRow expand="false" id="IT4" criteria="level" />
+	<EditIndentedTableRow position="3" refid="IT4" action="text" id="IT4TextInput" insideFreezePane="true"/>
+	<EditIndentedTableRow position="4" refid="IT4" action="text" id="IT4TextInput1" insideFreezePane="true"/>
+	<EditIndentedTableRow position="11" refid="IT4" action="text" id="IT4TextInput2" insideFreezePane="false"/>
+	
+	<SelectIndentedTableRow expand="false" id="IT5" criteria="level" />
+	<EditIndentedTableRow position="3" refid="IT5" action="text" id="IT5TextInput" insideFreezePane="true"/>
+	<EditIndentedTableRow position="4" refid="IT5" action="text" id="IT5TextInput1" insideFreezePane="true"/>
+	<EditIndentedTableRow position="11" refid="IT5" action="text" id="IT5TextInput2" insideFreezePane="false"/>
+	
+	<ClickElement locatorType="xpath" locatorExpression="//div[@id='mx_divStructureBrowserButtons']//input[@id='ApplyButton']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']//img"/> -->
+	
+	
+	<!-- Attribute=Date -->
+	<Login password="$csv{password}" username="$csv{username}"/>
+	<ClickGlobalActionsMenu commandLabel="Project|Create Project|New"/>
+	<SwitchToSlideInWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToParentWindow/>
+	<SwitchtoDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[normalize-space()='Schedule']"/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="PMCWBS"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionEdit.png']"/>
+	<SelectIndentedTableRow expand="false" id="row" criteria="level" /> 
+	<Wait time="3000"/> 
+	<EditIndentedTableRow id="SE Export Authorization Status" action="date" refid="row" position="12"/>
+    
+    
+    <!-- <Login password="$csv{password}" username="$csv{username}"/>
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToParentWindow/>
+	<SwitchToDefaultContent/>
+	 <ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="slideInFrame"/>
+	<ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="ENCBOM"/>
+	<ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+	<SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+    <EditIndentedTableRow position="12" refid="IT1" action="textwithselect" id="IT1TextInput" insideFreezePane="true" input="100" /> --> 
+	
+    
+    	
+	<!-- <Login password="$csv{password}" username="$csv{username}"/>
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    <SwitchToParentWindow/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+    <SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+    <SwitchToDefaultContent/>
+    <SwitchToFrame name="slideInFrame"/>
+    <ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    <SwitchToDefaultContent/>
+    <SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+    <SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@id='rmbrow-0,0']"/>
+    <ScrollToElement locatorType="id" locatorExpression="VPMVisible"/>
+	<EditIndentedTableRow position="12" refid="IT1" action="select" id="IT1TextInput" insideFreezePane="false" /> --> 
+	
+	<logout/>
+</TestCase> 

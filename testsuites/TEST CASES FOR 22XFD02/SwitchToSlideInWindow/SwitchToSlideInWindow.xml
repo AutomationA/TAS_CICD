@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+	
+	 <ClickGlobalActionsMenu commandLabel="Project|Create Project|New"/>
+	 <SwitchToSlideInWindow/>
+	    <ClickElement locatorType="xpath" locatorExpression="//input[@title='Type']"/>
+	    <InputText locatorType="id" locatorExpression="Name" input="DescriptionId"/>
+	 <!--    <InputText locatorType="id" locatorExpression="Project Date" input="$csv{Project date}"/> -->
+	 
+	 <SelectDate locatorType="xpath" locatorExpression="//img[@alt='Date Picker']" id="$csv{Project_Date}"/>
+	    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+	      
+	    
+<Logout/>
+</TestCase>

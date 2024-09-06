@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+    <SwitchToDefaultContent />
+    
+    <!-- Click Portal Command -->
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" />
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Part"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Part is created"/>
+	<SwitchToDefaultContent/>
+    <ClickCategoryCommand title="Part Specs &amp; Documents"/>
+	<ClickPortalCommand title="Reference Documents"/>
+	<SwitchToPortalDisplayFrame/>
+    <SwitchToFrame name="ENCReferenceDocuments"/>
+    <OpenActionToolbarMenu commandlabel="Create Document..."/>
+    <SwitchToWindow title="Create Document"/>
+    <Wait time="5000" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+    <SwitchToFrame name="checkinFrame"/>
+    <Wait time="4000"/>
+    <uploadFileUsingLocator path="C:\Users\SGSPC051\Downloads\Capture.PNG" locatorType="xpath" locatorExpression="//input[@name='bfile1']" id="uploadWithLocator"/>
+    <Wait time="4000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+    <Wait time="4000"/>
+    <SwitchToParentWindow/>
+     
+    <Logout/>  
+   
+</TestCase>
+	

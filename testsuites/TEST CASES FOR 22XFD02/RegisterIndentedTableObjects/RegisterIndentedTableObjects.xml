@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../resources/xsd/TestAutomationFramework.xsd">
+
+
+    <Login username="$csv{username}" password="$csv{password}" />
+    
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part" />
+    
+    <SwitchToSlideInWindow />
+
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+
+    <SwitchToDefaultContent/>
+  
+    <ClickElement locatorType="name" locatorExpression="li_ENCSpecAndReferenceDoc"/>
+	
+	<SwitchToPortalDisplayFrame/>
+	
+	<SwitchToFrame name="ENCSpecifications"/>
+	
+	<OpenActionToolbarMenu commandlabel="Create New" targetwindow="slidein"/>
+	
+	<SwitchToDefaultContent/>
+	
+	<SwitchToSlideInWindow/>
+	
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+	
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+	
+	<SwitchToDefaultContent/>
+	
+	<SwitchToPortalDisplayFrame/>
+	
+	<SwitchToFrame name="ENCSpecifications"/>
+	
+	<selectoropennewindentedtablerow criteria="select"/>
+	
+	<Wait time="1000"/>
+	
+	<selectoropennewindentedtablerow criteria="open"/>
+	
+	<Wait time="8000"/>
+	
+	<SwitchToDefaultContent/>
+	
+	<ClickBackButton/>
+	
+	<ClickCategoryCommand title="Engineering BOM"/>
+	
+	<SwitchToPortalDisplayFrame/>
+	
+    <SwitchToFrame name="ENCBOM"/>
+    
+    <ClickElement locatorType="id" locatorExpression="displayModeMenu"/>
+    
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+    
+    <Wait time="2000"/>
+    
+    <SwitchToPortalDisplayFrame/>
+    
+     <ClickElement locatorType="xpath" locatorExpression="//div[@id='divPvChannel-1-1']//div[@class='window-size btn-maximize']"/>
+     
+    <Wait time="2000"/> 
+    
+    <SwitchToPortalDisplayFrame/>
+    
+    <SwitchToFrame name="ENCBOM"/>
+    
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[@class='toolbar']//table//tbody//td[@title='Expand All']//img[1]"/>
+    
+
+    <SelectIndentedTableRow expand="false" id="Row01" criteria="level"/>
+    
+    <registerindentedtableobjects/>
+    
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//td[@title='Insert Part']"/>
+    
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(@class,'group-body')]//label[contains(text(),'New Part...')]"/>
+    
+    <SwitchToDefaultContent/>
+    
+    <SwitchToSlideInWindow/>
+    
+    <ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+    
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+    
+    <SwitchToDefaultContent/>
+    
+    <SwitchToPortalDisplayFrame/>
+    
+	<SwitchToFrame name="ENCBOM"/>
+	
+	<SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+	
+    <selectoropennewindentedtablerow criteria="level"/>
+	
+	<Wait time="1000"/>
+
+	
+</TestCase>

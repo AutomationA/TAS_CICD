@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+
+ <SwitchToSlideInWindow/>
+<ClickElement locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" locatorType="xpath"/>
+<InputText locatorExpression="DescriptionId" locatorType="id" input="Part"/>
+<HighlightElement locatorExpression="DescriptionId" locatorType="id" id="DescriptionId"/>
+<ClickElement locatorExpression="//button[@class='btn-primary']" locatorType="xpath"/>
+<ShowNotification message="Part is created"/> 
+<SwitchToDefaultContent/>
+<ClickCategoryCommand title="Engineering BOM"/>
+<SwitchToPortalDisplayFrame/>
+<SwitchToFrame name="ENCBOM"/>
+<ClickElement locatorExpression="displayModeMenu" locatorType="id"/>
+<ClickElement locatorExpression="//label[contains(text(),'Table')]" locatorType="xpath"/>
+<Wait time="2000"/>
+<SwitchToPortalDisplayFrame/>
+<ClickElement locatorExpression="//div[@id='divPvChannel-1-1']//div[@class='window-size btn-maximize']" locatorType="xpath"/>
+<Wait time="2000"/>
+ <SwitchToPortalDisplayFrame/>
+<SwitchToFrame name="ENCBOM"/>
+<ClickElement locatorExpression="//div[@id='divToolbar']//div[@class='toolbar']//table//tbody//td[@title='Expand All']//img[1]" locatorType="xpath"/>
+<SelectIndentedTableRow id="Row" criteria="level" expand="false"/>
+<AssertIndentedTableRow position="8" refid="Row" id="title" criteria="text" condition="=" insideFreezePane="false" highlight="true"/>
+<Wait time="1000"/>
+<SwitchToDefaultContent/>
+<Wait time="1000"/>
+</TestCase>

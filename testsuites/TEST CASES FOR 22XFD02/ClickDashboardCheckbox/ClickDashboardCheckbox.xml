@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+    
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	<setStartWindow />
+    <OpenCompassApp quadrant="east" appname="3DDashboard" />
+    <Wait time="5000" />
+    <SwitchToWindow />
+    <!-- xpath for 22x -->
+    <!-- <ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-expand-collapse-panel new-dashboard-menu-open-btn inactive']"/> --> -->
+	<!-- xpath for 22x -->
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/>
+    <OpenCompassApp quadrant="east" appname="R" />
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENORETV_AP')]"/>
+    <ClickDashboardCheckbox action="check" rows="1|3|5"/>
+    <SwitchToStartWindow />
+	
+	
+
+	<Logout/>   
+    
+</TestCase>
+	

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+  
+ <OpenCompassApp quadrant="East" appname="Collaborative Lifecycle" appIndex="1"/>
+ <switchToWindow/>
+ <!-- for 22x -->
+ <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']"/>
+ <Wait time="1000"/>
+ <OpenCompassApp quadrant="East" appname="Change Action" appIndex="2" />
+ <!--for 22X  -->
+ <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']"/>
+ <Wait time="4000"/>
+<FindElement locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOWCHA_AP')]" id="iframe1"/>
+<FindElement locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOLCMI_AP')]" id="iframe2"/>
+<!-- for 22x -->
+<DragAndDrop wait="4000" locatorType="xpath" sourceLocatorExpression="(//div[@class='wux-tweakers wux-tweakers-string wux-tweakers-string-label wux-tweakers-labelonly' and text()='Create change'])[1]" targetLocatorExpression=" //div[@class='empty-content']" sourceFrameRefId="iframe1"  targetFrameRefId="iframe2" mode="robot"/>
+<SwitchToDefaultContent/>
+<switchToParentWindow/> 
+  
+
+
+
+ </TestCase>	

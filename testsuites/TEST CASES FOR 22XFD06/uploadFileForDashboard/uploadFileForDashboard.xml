@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+
+
+<Login username="$csv{username}" password="$csv{password}"/>
+<SwitchToDefaultContent/>
+
+
+<!-- <setStartWindow/>
+<OpenCompassApp appname="3DDashboard" quadrant="east"/>
+<SwitchToWindow/>
+<CreateDashboard input ="TestToWork"/>
+<Wait time="1000"/>
+<SwitchToDefaultContent/>
+<OpenCompassApp quadrant="east" appname="Component Request Management"/>
+<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+<SwitchToDefaultContent/>
+<ClickElement locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']" locatorType="xpath"/>
+<SwitchToFrame locatorExpression="//iframe[contains(@src,'ENXNCRQ_AP')]" locatorType="xpath"/>
+<Wait time="3000"/>
+<ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'New Component Request')]"/>
+<ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-tweakers wux-tweakers-string wux-tweakers-string-label wux-tweakers-labelonly'][normalize-space()='Component Introduction Request']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[@id='createBtn']"/>
+<Wait time="1000"/>
+<InputText locatorType="xpath" locatorExpression="//input[@placeholder='Enter title']" input="TestTitle" />
+<ClickElement locatorType="xpath" locatorExpression="//button[@id='createBtn']"/>
+<ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='Attachments']"/>
+ 
+<ClickElement locatorType="xpath" locatorExpression="//div[contains(@class,'enox-collection-toolbar-right-menu-wrapper enox-collection-toolbar-right-menu-wrapper-width enox-collection-toolbar-right-menu-wrapper-width')]//li[1]"/>
+<uploadFileForDashboard id="input" path="$csv{input}"  locatorType="xpath"  locatorExpression="//li[@id='UploadSpecification']" />
+ <uploadFileUsingLocator path="D:\Capture.PNG" locatorType="xpath" locatorExpression="//input[@name='bfile1']" id="uploadWithLocator"/>
+<ClickElement locatorType="xpath" locatorExpression="(//button[normalize-space()='Review'])[1]"/>
+<ClickElement locatorType="xpath" locatorExpression="(//button[normalize-space()='Submit'])[1]"/>
+<SwitchToDefaultContent/>
+<Wait time="1000"/>
+<Wait time="1000"/>  -->
+
+
+
+
+
+
+	
+	<OpenCompassApp appname="3DDashboard" quadrant="east"/>
+	<SwitchToWindow/>
+	<CreateDashboard input ="TestToWork"/>
+	<Wait time="1000"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Document Management"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+	
+	<ClickElement locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']" locatorType="xpath"/>
+	
+	
+	
+	<SwitchToFrame locatorExpression="//iframe[contains(@src,'ENXWDOC_AP')]" locatorType="xpath"/>
+	<Wait time="1000"/>
+	<Wait time="1000"/><Wait time="1000"/>
+	<Wait time="1000"/>
+	
+	<uploadFileForDashboard id="input" path="$csv{input}"  locatorType="xpath"  locatorExpression="//div[@class='text-element'][normalize-space()='Upload']"/> -->
+	 
+	<Wait time="1000"/>
+	<Wait time="1000"/><Wait time="1000"/>
+	<Wait time="1000"/>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+</TestCase>

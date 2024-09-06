@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation=" ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	<SetStartWindow/>
+	<OpenCompassApp quadrant="east" appname="3D Markup" />
+	<SwitchToWindow/>
+	<SwitchToDefaultContent/>
+	<Wait time="2000"/>
+	<PinWidgetToDashboard pinBtnInWidget="true"/>
+	<Wait time="2000"/>
+	<MaximizeAndMinimize maximizeminimizeWidget="true" appname="3D Markup"/>
+	
+	
+	
+  <!--  <Wait time="5000"/>
+	<MaximizeAndMinimize  appname="3D Markup"/>
+		<Wait time="5000"/>
+		<MaximizeAndMinimize maximizeminimizeWidget="true" appname="3D Markup"/>
+			<Wait time="5000"/>
+		<MaximizeAndMinimize maximizeminimizeWidget="false" appname="3D Markup"/> -->
+		<Wait time="5000"/>
+		
+		
+	<SwitchToStartWindow/>
+	<Logout/>   
+  
+  
+ 
+
+
+  
+</TestCase>
+	

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+
+ 	<GlobalSearch id="Search_Object_Name"/>
+    <Wait time="6000"/>   
+	<OpenSearchResult id="Search_Object_Name" criteria="text" column="Type" value="Part"/> 
+	
+	<Wait time="3000"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@id='catButton']"/>
+
+
+	<!-- Upload File Using Drag and Drop  -->
+	<ClickCategoryCommand title="Part Specs &amp; Documents"/>
+	<ClickPortalCommand title="Reference Documents"/>
+	<SwitchToPortalDisplayFrame/>
+	<SwitchToFrame name="ENCReferenceDocuments"/>
+ 	<SwitchToDefaultContent/>
+	<UploadFileUsingDragAndDrop path="C:\\Users\\SGSPC045\\Downloads\\MicrosoftTeams-image.PNG" locatorType="xpath" locatorExpression="//div[@id='divDrag']"/>
+	<Wait time="6000"/>
+	<SwitchToParentWindow/>	
+	<Print expression="$currentWindow"/> 
+
+</TestCase>

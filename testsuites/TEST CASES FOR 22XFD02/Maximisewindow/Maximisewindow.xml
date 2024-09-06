@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	<SwitchToDefaultContent/>
+	<Wait time="3000"/>
+	
+	<ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+	<SwitchToWindow/>
+	<MaximiseWindow/>
+		
+<ClickElement locatorType="xpath" locatorExpression="//input[@id='Name']"/>
+	<InputText locatorType= "xpath" locatorExpression="//input[@id='MarketingName']" input="Marketing Name"/>
+	
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+<SwitchToDefaultContent/>
+	
+	
+	
+	
+	
+	
+	
+		</TestCase>
+	

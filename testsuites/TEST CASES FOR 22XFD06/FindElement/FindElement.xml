@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+ 
+ 
+                     <!-- <Login/> -->
+                 
+<!-- <Login username="$csv{username}" password="$csv{password}" />  
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+<InputText locatorType="id" locatorExpression="VPMProductName1" input="TestTitle"/> 
+<InputText locatorType="id" locatorExpression="DescriptionId" input="DescriptionId"/>
+<FindElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" id="Ok"/>
+<Action name="click" refid="Ok"/> -->
+
+
+                   <!-- Attribute=name -->
+<Login username="$csv{username}" password="$csv{password}" />  
+<ClickGlobalActionsMenu commandLabel="Change|Create Change Action"/>                
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@id='Abstract']"/>
+<InputText locatorType="id" locatorExpression="Abstract" input="TestTitle"/> 
+<FindElement locatorType="xpath" locatorExpression="//textarea[@id='DescriptionId']" input="Action"/>
+<Wait time="3000"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" id="Ok"/>
+<Wait time="3000"/>
+</TestCase>
+ 
+ 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- optional_Start optional_Close -->
+	<ClickMyDeskMenu commandLabel="Collaboration and Approvals|Member Lists"/>
+	<SwitchToContentFrame/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionCreate.png']"/>
+	<SwitchToDefaultContent/>
+	
+	<optionalStart/>
+    <SwitchToFrame name="slideInFrame"/>
+	<InputText locatorType="id" locatorExpression="Name" id="MemberListName"/>
+	<InputText locatorType="id" locatorExpression="DescriptionId" id="MemberListDescription"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[text()='OKhv']"/>
+    <optionalClose/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[text()='OK']"/>
+    <ClickCategoryCommand title="Lifecycle"/>
+    <!-- <SwitchToPortalDisplayFrame/> -->
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>AEFLifecycleBasic"/>
+    <!-- <Wait Time="5000"/> -->
+    <!--   <Lifecycle action="promote"/> -->
+	<wait time="3000"/>
+    <wait time="3000"/>
+    <Lifecycle action="promote"/>
+	<Logout/>   
+    
+</TestCase>

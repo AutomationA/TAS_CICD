@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+  <ClickElement locatorType="namwe" locatorExpression="btnTypeActual" />
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Click Element using xpath -->
+    <!-- <ClickGlobalActionsMenu commandLabel="Product Line|Create Model" />
+    <SwitchToWindow />
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+    <InputText locatorType="id" locatorExpression="MarketingName" input="Market1"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <ShowNotification message="Model is Created" />
+    <SwitchToParentWindow/> -->
+	
+	
+	
+	<!-- Using Different Attribute Click Element by name, cssselector, id -->
+	<ClickGlobalActionsMenu commandLabel="Library|Create Library|Create Part Library" />
+    <SwitchToWindow />
+    <ClickElement locatorType="namwe" locatorExpression="btnTypeActual" />
+    <SwitchToWindow />
+    <ClickElement locatorType="cssselector" locatorExpression="img[width='19']" />
+    <ClickElement locatorType="xpath" locatorExpression="//input[@value='Part Library|Part Library']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <SwitchToParentWindow/>
+    <InputText locatorType="name" locatorExpression="Title" input="Unique"/>
+    <ClickElement locatorType="name" locatorExpression="btnNotify" />
+    <SwitchToWindow />
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-controls-responsivetileview-picture']" />
+    <ClickElement locatorType="id" locatorExpression="id_in_app_ok" />
+    <SwitchToParentWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <ShowNotification message="library part is Created" />
+    <SwitchToParentWindow/>
+        
+	<Logout/>   
+    
+</TestCase>
+	

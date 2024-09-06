@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	<SetStartWindow/>
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<SwitchToDefaultContent/>
+	<!-- <ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-expand-collapse-panel new-dashboard-menu-open-btn inactive']"/> -->
+    <!-- <ClickElement locatorType="xpath" locatorExpression="//p[@class='dashboard-menu-list-item-text-description']"/> -->
+	<!-- <ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='MyFirstTab']"/> -->
+	<!-- <MaximizeAndMinimize maximizeminimizeWidget="False" appname="Calculator"/> -->
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='dashboard-menu-list-item active']']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='New Tab']"/>
+	<MaximizeAndMinimize maximizeminimizeWidget="false" appname="3DPlay"/>
+	<SwitchToStartWindow/>
+	<Logout/>   
+  
+</TestCase>
+	

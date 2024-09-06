@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Scroll To Element vertically -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Change|Create Change Order" />
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='btnTypeActual']" />
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='radType']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <switchToParentWindow />
+    <SwitchToSlideInWindow/>
+    <InputText locatorType="id" locatorExpression="Title" input="Market1"/>
+    <ScrollToElement locatorType="xpath" locatorExpression="//label[@for='InformedUsersWithGroup']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <ShowNotification message="Model is Created" />
+    <SwitchToParentWindow/> -->
+	
+	
+	<!-- Using Different Attributes Scroll To Element horizontally -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="B Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<Wait time="5000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+    <SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+	<ScrollToElement locatorType="id" locatorExpression="Description"/>
+	 -->
+	 
+	<!-- Scroll to Element When there are too many search option and ScrollBar goes smaller -->
+	<!-- This Scenario is for 22x -->
+	<!-- <GlobalSearch id="Search Object" type="All" searchtype="search"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='Datagrid View']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='show-more type-show-more']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[normalize-space()='Preparation']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='tagger-close fonticon fonticon-cancel']"/>
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@cell-id='19']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-controls-abstract wux-layouts-collectionview-cell wux-layouts-datagridview-cell']"/>
+	<Wait time="5000"/>
+	<ScrollToElement locatorType="xpath" locatorExpression="(//span[contains(text(),'ImportedAsNew-2TAT1_JetB4_A101-1550-0006-2530 A.1')])[3]" issendkeys="true" key="PAGE_DOWN" scrollarea="//div[@class='wux-layouts-gridengine-poolcontainer-rel']"/> -->
+
+
+    <!-- Scroll to Element in DashBoard for horizontal scenario -->
+	<!-- This Scenario is for 22x -->
+	<!-- <setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/>
+	<CreateDashboard input ="Test1"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Change Action" appIndex="2"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOWCHA_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-controls-toolbar-containers wux-controls-toolbar-farContainer']//div[3]//div[1]//div[1]//div[1]//div[1]" />
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-menu-column wux-menu-column-left']//div[1]//div[1]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-ui-fa wux-icon wux-ui-fa-check']"/>
+    <Wait time="5000"/>
+	<ScrollToElement locatorType="xpath" locatorExpression="//div[contains(text(),'Attachment')]"/>
+	<SwitchToStartWindow /> -->
+	
+	<!-- Scroll to Element in DashBoard for horizontal scenario-->
+	<!-- <setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/>
+	<CreateDashboard input ="Test1"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Requirements" appIndex="2"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-header-icon ifwe-action-icon fonticon fonticon-pin clickable']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']" />
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fonticon fonticon-close new-dashboard-menu-close-btn']" />
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENORETV_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Create')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@data-wux-menu-item-uid='2']"/>
+    <OpenNewToolbarInDashboard toolbarName="Edit" actionmenu="New Requirement" />
+    <OpenNewToolbarInDashboard toolbarName="Edit" actionmenu="New Requirement" />
+    <ClickElement locatorType="xpath" locatorExpression="//div[@cell-id='28']"/> 
+    <Wait time="5000"/>
+	<ScrollToElement locatorType="xpath" locatorExpression="//div[@cell-id='20']" scrollarea="//div[@has-overflow-x='true']//div[@class='wux-scroller wux-ui-is-rendered']"/>
+	<SwitchToStartWindow /> -->
+	
+	<!-- Scroll to Element in DashBoard for vertical scenario-->
+	<setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<!-- <ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/> -->
+	<CreateDashboard input ="Test1"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Component Request Management"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']" />
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']"/>
+	<SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENXNCRQ_AP')]"/>
+	<ClickElement locatorType="id" locatorExpression="modal-wizard-type"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Component Introduction Request')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@id='createBtn']"/>
+	<ScrollToElement locatorType="xpath" locatorExpression="//label[normalize-space()='Production Plan Date']"/>
+	<CloseCurrentWindow />
+	<SwitchToStartWindow />
+	
+
+	<Logout/>   
+    
+</TestCase>
+

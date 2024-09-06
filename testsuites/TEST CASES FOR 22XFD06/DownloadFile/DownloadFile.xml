@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}" />  
+
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+<InputText locatorType="id" locatorExpression="VPMProductName1" input="TestTitle"/> 
+<InputText locatorType="id" locatorExpression="DescriptionId" input="DescriptionId"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+<SwitchToDefaultContent/>
+<ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+
+<ClickElement locatorType="xpath" locatorExpression="//li[@title='Change Management']//label[contains(text(),'Change Management')]" />
+
+<Wait time="2000"/>
+<SwitchToFrame name="content"/>
+<SwitchToFrame name="detailsDisplay"/>
+<SwitchToPortalDisplayFrame/>
+<SwitchToFrame name="ECMCAs"/>
+
+<ClickElement locatorType="xpath" locatorExpression="//input[@id='rmbrow-0,0']"/>
+
+
+
+
+
+
+
+
+
+<!-- <SwitchToFrame name="checkinFrame"/>
+<Wait time="4000"/>
+<uploadFileUsingLocator path="$csv{uploadWithLocator}" locatorType="xpath" locatorExpression="//input[@name='bfile0']" id="uploadWithLocator"/>
+<Wait time="4000"/>
+<SwitchToDefaultContent/> 
+<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+<SwitchToParentWindow/>
+<SwitchToDefaultContent/> 
+<SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCReferenceDocuments"/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='chkList']"/>
+<DownloadFileUsingCommand commandlabel="Download" targetwindow="none"/>
+<DownloadFile locatorType="xpath" locatorExpression="//label[text()='Download']"/>
+ <DownloadFile locatorType="class" locatorExpression="checked"/> -->
+<Wait time="10000"/> -->
+ 
+  </TestCase>
+ 

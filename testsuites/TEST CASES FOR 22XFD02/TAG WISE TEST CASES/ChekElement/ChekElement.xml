@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+	
+	 <!--to run this script need to change password for STEEPGRAPH 22x  -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part" />
+	<SwitchToFrame name="slideInFrame" />
+	<Wait time="3000" />
+	<SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" id="AutoNameSeries" />
+	<Wait time="2000" />
+     <CheckElement locatorType="id" locatorExpression="Name" criteria="editable" /> 
+      
+     FOR ENABLE ATTRIBUTE 
+     <CheckElement locatorType="id" locatorExpression="VPMProductName1" criteria="enabled" />
+    <HighlightElement locatorType="xpath" locatorExpression="//input[@id='VPMProductName1']"/>
+    
+	<Wait time="2000" />
+	<ClickElement locatorType="id" locatorExpression="Name" />
+	<Wait time="1000" />
+    <Sendkeys key="Test1"/>	
+    <Wait time="3000" />
+	<Assert locatorType="xpath" locatorExpression="//label[normalize-space()='Title']" id="TextToCheck" criteria="text" condition="="/>
+	<Wait time="3000" />
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button' and @class='btn-primary']" />
+	<DeleteAllCookies/> -->
+
+<!-- FOR  STEEPGRAPH 21DEV  -->
+<!-- username and password changed in csv file for this -->
+	<!-- FOR NON EDITABLE ATTRIBUTE -->
+     <ClickElement locatorType="xpath" locatorExpression="//span[@class='topbar-user-context-text']"/>
+      <ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='Common Space']"/>
+      <CheckElement locatorType="xpath" locatorExpression="//input[@id='Project_txt']" criteria="noneditable"/>
+      <CheckElement locatorType="xpath" locatorExpression="//input[@id='Project_txt']" criteria="disabled"/>
+	   <!-- <CheckElement locatorType="xpath" locatorExpression="//input[@id='Project_txt']" criteria="enable"/>  -->
+
+	   <Logout/>
+</TestCase>
+	

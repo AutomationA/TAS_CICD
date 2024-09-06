@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	<SwitchToDefaultContent/>
+	<Wait time="3000"/>
+    <!-- for www.steepgraph2021x.com/3dspace -->	
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@title='Type']"/>
+	
+	
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Part"/>
+	<HighlightElement locatorType="id" locatorExpression="DescriptionId" id="DescriptionId"/>
+	
+	
+    <ClickElement locatorType="xpath" locatorExpression="//input[@title='Part Family']"/>
+    <OpenChooser fieldlabel="Part Family"/>
+	
+	 <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-datagridview-selection-label'][normalize-space()='1']"/>
+	 <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/> -->
+	 
+	 
+	 
+	 <!-- forwww.steepgraphdev2022xdev.com/3dspace -->
+
+   <ClickGlobalActionsMenu commandLabel="Variant Management|Variants and Options|Create Variant"/>
+   <SwitchToWindow />
+   <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+ 
+  <OpenChooser fieldlabel="Type"/>
+ 
+   <ClickElement locatorType="xpath" locatorExpression="//input[@name='radType']"/>
+
+   <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Select']"/>
+  <wait time="5000"/>
+   <SwitchToParentWindow/>
+   <InputText locatorType="id" locatorExpression="Display Name" input="text"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+    
+  
+
+
+
+  </TestCase>
+

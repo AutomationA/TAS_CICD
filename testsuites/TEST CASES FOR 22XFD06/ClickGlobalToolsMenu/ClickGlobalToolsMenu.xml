@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}" /> 
+	 
+	<!-- ClickGlobalToolsMenu , attribute="commandLabel" -->
+	<!-- <ClickGlobalToolsMenu commandLabel="Profile|My Credentials"/>
+	<ClickGlobalToolsMenu commandLabel="Profile|My Credentials" highlight="true" style="Calibri Light (Headings)"/> 
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/> -->
+    
+    
+    <!-- ClickGlobalToolsMenu , attribute="highlight" -->
+    <ClickGlobalToolsMenu commandLabel="Profile|Refresh My Licenses" highlight="true" style="Calibri Light (Headings)" />
+    <wait time="3000"/>
+    <HandleAlert action="accept"/>
+    <Logout/> 
+    </TestCase>
+    
+    
+    

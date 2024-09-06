@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd"> 
+ 
+  <clickoverridelink/>
+ <!--  <ClickElement locatorType="xpath" locatorExpression="//button[@class='secondary-button small-link']"/>
+  <ClickElement locatorType="xpath" locatorExpression="//a[@id='proceed-link']"/> -->
+  <Wait time="1000"/>
+  
+  <Login username="$csv{username}" password="$csv{password}"/>
+  
+  <Wait time="1000"/>
+  <logout/>
+
+
+
+
+
+
+
+
+
+
+</TestCase>	

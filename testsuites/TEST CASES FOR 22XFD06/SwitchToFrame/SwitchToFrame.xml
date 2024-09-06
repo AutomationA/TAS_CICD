@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+ <ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+ <SwitchToWindow/>
+ <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+ <InputText locatorType="id" locatorExpression="MarketingName" input="Market1"/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+ <SwitchToParentWindow/>
+ <SwitchToDefaultContent/>
+ <ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/> 
+ <ClickElement locatorType="xpath" locatorExpression=" //li[@title='Product Lines']//label[contains(text(),'Product Lines')]"/>
+ <SwitchToFrame name="content=>detailsDisplay=>"/>
+ <ClickElement locatorType="xpath" locatorExpression="//input[@id='rmbrow-0']"/>
+ <SwitchToDefaultContent/>
+<ClickBackButton/>
+<Logout/>
+</TestCase>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+	
+	 <!-- <Login username="$csv{username}" password="$csv{password}" /> 
+	<Wait time="10000"/> 
+    <ClickGlobalToolsMenu commandLabel="Profile|Preferences"/>
+    <Wait time="10000"/> 
+    <SwitchToWindow/>
+    <Wait time="10000"/> 
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Cancel']"/>
+    <Wait time="10000"/>   -->
+	 
+	<!-- Attribute=Title and last -->
+    <Login username="$csv{username}" password="$csv{password}" /> 
+    <ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+    <SwitchToWindow title="Create Product Line" last="true"/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@id='Name']"/>
+    <InputText locatorType="id" locatorExpression="Name" input="TestTitle1"/> 
+	<ClickElement locatorType="xpath" locatorExpression="//input[@id='MarketingName']"/>
+    <InputText locatorType="id" locatorExpression="Name" input="TestTitle4"/> 
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+	<wait time="3000"/>
+	
+	
+</TestCase>
+	

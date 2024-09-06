@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	<SwitchToDefaultContent/>
+	<Wait time="3000"/>
+<switchToWindow/>
+<!-- <ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+<SwitchToContentFrame/>
+
+ <clickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+<Input name="autoNameChek" value="True" type="chekbox"/>
+ <InputText locatorType= "xpath" locatorExpression="//input[@id='MarketingName']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+<SwitchToDefaultContent/> -->
+
+ 
+		
+	
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" />
+	
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Part"/>
+	
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Part is created"/>
+	<SwitchToDefaultContent/>
+	
+	
+<!-- 	<ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+<SwitchToWindow/>
+<InputText input="Product" locatorExpression="#Name" locatorType="cssselector"/>
+<InputText input="Market1" locatorExpression="MarketingName" locatorType="id" highlight="true"/>
+<InputText locatorExpression="//textarea[@id='MarketingTextId']" locatorType="xpath" encrypted="true" id="password"/>
+<ClickElement locatorExpression="//button[@class='btn-primary']" locatorType="xpath"/>
+<SwitchToParentWindow/> -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<Logout/>
+	
+</TestCase>	

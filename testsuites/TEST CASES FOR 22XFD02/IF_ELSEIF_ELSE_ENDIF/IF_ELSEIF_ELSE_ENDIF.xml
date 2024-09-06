@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+
+
+   <Wait time="5000" />
+
+    
+ 
+    
+ 	<GlobalSearch id="Search_Object_Name"/>
+ 	    <Wait time="6000"/>   
+	<OpenSearchResult id="Search_Object_Name" criteria="text" column="Type" value="Part"/> 
+	
+	<Wait time="3000"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@id='catButton']"/>
+	<ClickCategoryCommand title="Part Specs &amp; Documents"/>
+	<ClickPortalCommand title="Reference Documents"/>
+	<SwitchToPortalDisplayFrame/>
+	<SwitchToFrame name="ENCReferenceDocuments"/>
+	<Print expression="$currentFrame"/>
+	
+	
+	<IF locatorType="xpath" locatorExpression="//td[@title='DOC-000650004']" criteria="visible" condition="&lt;=" id="Model" wait="90000"/>
+			<Include filepath="testsuites/22xscript for ready to go/BB/CreateObjecttBB.xml"/>
+			
+	<ELSEIF locatorType="xpath" locatorExpression="//td[@title='DOC-0000004s']" criteria="visible" condition="=" id="Model"/> 
+	
+	<!-- //td[@title='DOC-0000004'] -->
+	
+			<SelectIndentedTableRow expand="false" id="row" criteria="level"/>
+			<OpenActionToolbarMenu commandlabel="Remove" targetwindow="popup"/>
+			<Wait time="5000" />
+			<HandleAlert action="accept"/>
+			<!-- <AssertAlert action="present" />
+			<AssertAlert id="Error message for MOA" action="accept"/> -->
+			<Wait time="1000"/> 
+   <!--  <ELSE/>
+       		<SwitchToDefaultContent/>
+			<UploadFileUsingDragAndDrop path="C:\\Users\\SGSPC045\\Downloads\\MicrosoftTeams-image.PNG" locatorType="xpath" locatorExpression="//div[@id='divDrag']"/>
+			<Wait time="6000"/>
+			<Wait time="6000"/>
+			<SwitchToParentWindow/>	
+			<Print expression="$currentWindow"/>  -->
+
+    <ENDIF/>
+
+
+
+
+	<Logout/>   
+	</TestCase>

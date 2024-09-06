@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<StartPerformanceLogs/>
+     <Login password="$csv{password}" username="$csv{username}"/>
+    <Wait time="1000" />
+    
+    
+    <GetValueFromCookies cookieName="JSESSIONID"/>
+   <StopPerformanceLogs/>
+   
+   
+   </TestCase>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

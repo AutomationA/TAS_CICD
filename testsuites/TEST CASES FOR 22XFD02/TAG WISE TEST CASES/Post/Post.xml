@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.steepgraph.com ../../resources/xsd/TestAutomationFramework.xsd">
+	
+	
+    <!-- Post Tag Script --> 
+	<Login password="$csv{password}" username="$csv{username}" />
+	<SwitchToDefaultContent />
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part" />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>   
+	
+	<!-- Using include Tag between Post_EndPost   -->
+	<Post />    
+	<Include filepath="testsuites/Building_Blocks_BB/bb.xml"/>    
+	<EndPost />  
+
+ 
+
+</TestCase>

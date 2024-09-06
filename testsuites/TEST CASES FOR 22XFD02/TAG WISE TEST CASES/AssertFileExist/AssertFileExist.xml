@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+	<Login username="$csv{username}" password="$csv{password}" />  
+
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+
+<InputText locatorType="id" locatorExpression="VPMProductName1" input="TestTitle"/>
+<InputText locatorType="id" locatorExpression="DescriptionId" input="DescriptionId"/>
+
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+
+<SwitchToDefaultContent/>
+<ClickCategoryCommand title="Part Specs &amp; Documents"/>
+
+<ClickPortalCommand title="Reference Documents"/>
+    
+<SwitchToPortalDisplayFrame/>
+    
+<SwitchToFrame name="ENCReferenceDocuments"/>
+
+<OpenActionToolbarMenu commandlabel="Create Document..."/>
+<SwitchToWindow title="Create Document"/>
+
+<Wait time="5000" />
+
+  <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+
+   <SwitchToFrame name="checkinFrame"/>
+  
+   <Wait time="4000"/>
+   
+  <uploadFileUsingLocator path="D:\Capture.PNG" locatorType="xpath" locatorExpression="//input[@name='bfile1']" id="uploadWithLocator"/>
+  
+  <Wait time="4000"/>
+  
+  <SwitchToDefaultContent/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+ <SwitchToParentWindow/>
+   <SwitchToDefaultContent/>
+  
+  <SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCReferenceDocuments"/>
+  
+    <SelectIndentedTableRow expand="false" id="SelectRow" criteria="level"/>
+    <DownloadFileUsingIcon position="8" refid="SelectRow"/>
+    <Wait time="9000"/>
+   
+   	<AssertFileExists id="SelectRow1"/>
+    
+      <Wait time="3000"/>
+    <Post/>
+    <Logout preCheck="true"/>
+    <EndPost/>
+	
+	</TestCase>

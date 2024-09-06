@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+ 
+  <Login username="$csv{username}" password="$csv{password}" /> 
+  
+  <!--  OpenURL -->
+  <OpenURL url="https://www.steepgraph2021x.com/3dspace/common/emxNavigator.jsp?ticket=ST-1668-yNf2Oshmt5QOc4lViPdc-cas" target="self"/>
+  <Wait time="6000"/>
+ 
+ </TestCase>

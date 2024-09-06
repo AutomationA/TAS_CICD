@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- set Start Window --> 
+	
+	<setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<CreateDashboard input ="Test11"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="3DPlay" />
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+    <SwitchToDefaultContent/>
+    <SwitchToStartWindow />
+    
+	<Logout/>
+
+    
+</TestCase>

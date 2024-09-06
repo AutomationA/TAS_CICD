@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	<!-- select or open new indented table row -->
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="B Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    
+    <!-- CREATE EBOM --> 
+    <Wait time="5000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+    <SwitchToDefaultContent/>
+    <SwitchToFrame name="slideInFrame"/>
+    <ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    <SwitchToDefaultContent/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+    <SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+    <selectoropennewindentedtablerow criteria="Open"/>
+    <SwitchToDefaultContent/> 
+    
+    
+	
+	<!-- Using Different Attributes select or open new indented table row using criteria open -->
+	<!-- <Wait time="5000"/>
+    <ClickMyDeskMenu commandLabel ="Change Management|My Changes"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="content=>portalDisplay=>ECMMyChangeActions"/>
+	<SelectOrOpenNewIndentedTableRow criteria="Open"/>
+	<ClickCategoryCommand title="CA-70002171-00000011"/> -->
+   
+   <Logout/>   
+    
+</TestCase>

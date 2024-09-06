@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	<!-- Close All Other Window -->
+	<ClickGlobalActionsMenu commandLabel="Engineering|Specifications|Create Part Specification" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<SwitchToParentWindow />
+	<OpenCompassApp appname="Classify &amp; Reuse"/>
+    <SwitchToWindow/> 
+    <SwitchToDefaultContent /> 
+    <!-- <ClickCategoryCommand title="Libraries" />   -->
+    <ClickElement locatorType="xpath" locatorExpression="//label[normalize-space()='Libraries']" />	
+    <SwitchToFrame name="content" />
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionActions.png']" />	
+    <ClickElement locatorType="xpath" locatorExpression=" //label[normalize-space()='Create Library']" />
+    <ClickElement locatorType="xpath" locatorExpression=" //label[normalize-space()='Create Part Library...']" />
+    <SwitchToDefaultContent/>
+    <SwitchToSlideInWindow />
+	<InputText locatorType="id" locatorExpression="Title" input="TestTitlePartLibrary"/> 
+	<!-- <InputText locatorType="id" locatorExpression="Name" input="Field"/> -->
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<SwitchToDefaultContent/>
+    <CloseAllOtherWindow></CloseAllOtherWindow>
+    
+	<Logout/>   
+   
+</TestCase>
+	

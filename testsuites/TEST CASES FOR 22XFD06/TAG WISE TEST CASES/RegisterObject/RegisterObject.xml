@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+     <Login password="$csv{password}" username="$csv{username}"/>
+     <SwitchToDefaultContent/>
+
+     <wait time="2000"/>
+
+     <!-- create object from Global action menu -->
+     <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+     <SwitchToSlideInWindow/>
+     <ClickElement locatorExpression="//input[@name='autoNameCheck']" locatorType="xpath"/>
+     <InputText locatorExpression="VPMProductName1" locatorType="id" input="TestTitle"/>
+     <InputText locatorExpression="DescriptionId" locatorType="id" input="DescriptionId"/>
+     <ClickElement locatorExpression="//button[normalize-space()='OK']" locatorType="xpath"/>
+     <SwitchToDefaultContent/>
+     <SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCPartProperty"/>
+     <RegisterObject locatorExpression="//span[@class='object']" locatorType="xpath" removeSpace="true" id="Register_Model_Name"/>
+     <SwitchToDefaultContent/>
+     <ClickElement locatorExpression="//div[@class='home topbar-menu-item topbar-cmd enabled fonticon fonticon-home-alt']" locatorType="xpath"/>
+     <SwitchToDefaultContent/>
+     
+     
+</TestCase>

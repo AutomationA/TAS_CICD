@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+	
+	
+	<ValidateBegin filePath="D:\1864 Project daily worksheet.xlsx"/>    
+    <ValidateBehaviour data="Tas Environment set up" row="7" col="1" sheet="0"/>    
+    <ValidateEnd/>
+	<Wait time="10000">
+	</Wait>
+</TestCase>	
+	

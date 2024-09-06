@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+<Login password="$csv{password}" username="$csv{username}"/>
+<!-- For editable Attribute -->
+ <SwitchToDefaultContent/>
+<Wait time="1000"/>
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part" />
+<SwitchToFrame name="slideInFrame" />
+<Wait time="3000" />
+<SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" id="AutoNameSeries" />
+<Wait time="2000" />
+<CheckElement locatorType="id" locatorExpression="Naqme" criteria="editable" />
+
+<!-- FOR ENABLE ATTRIBUTE -->
+ <CheckElement locatorType="id" locatorExpression="VPMProductName1" criteria="enabled" />
+<HighlightElement locatorType="xpath" locatorExpression="//input[@id='VPMProductName1']"/>
+<Wait time="2000" />
+<ClickElement locatorType="id" locatorExpression="Name" />
+<Wait time="1000" />
+<Sendkeys key="Test1"/>
+<Wait time="3000" />
+<Assert locatorType="xpath" locatorExpression="//label[normalize-space()='Title']" id="TextToCheck" criteria="text" condition="="/>
+<Wait time="3000" />
+<ClickElement locatorType="xpath" locatorExpression="//button[@type='button' and @class='btn-primary']" />
+<DeleteAllCookies/>  
+
+<!-- for visible Attribute -->
+<SwitchToDefaultContent/>
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+<InputText locatorType="id" locatorExpression="VPMProductName1" input="TestTitle"/>
+<InputText locatorType="id" locatorExpression="DescriptionId" input="DescriptionId"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+<SwitchToParentWindow/>
+<SwitchToDefaultContent/>
+<SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCPartProperty"/>
+<CheckElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionEdit.png']" criteria="visible" />
+
+</TestCase>

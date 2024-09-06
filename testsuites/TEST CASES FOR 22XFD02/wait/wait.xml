@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+    
+    <!--  TAG = wait-->
+     <!-- <Login password="$csv{password}" username="$csv{username}"/>
+     <wait time="1000"/>
+     <ClickGlobalActionsMenu commandLabel="Product Line|Create Model"/>
+	 <SwitchToWindow/>
+	 <wait time="3000"/>
+	 <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+     <ClickElement locatorType="xpath" locatorExpression="//input[@id='MarketingName']"/>
+	 <InputText locatorType="id" locatorExpression="MarketingName" input="Actions"/>
+     <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+     <SwitchToParentWindow/>
+     <Logout/>
+      -->
+     <Login password="$csv{password}" username="$csv{username}"/>
+     <ClickMyDeskMenu commandLabel="Change Management|My Changes"/>
+     <SwitchToDefaultContent/>
+     <SwitchToFrame name="content=>portalDisplay=>ECMMyChangeActions" />    
+     <Wait time="3000"/>
+     <FindElement locatorType="name" locatorExpression="emxTableRowIdActual" id="properties"/>
+     <Action name="rightclick" refid="properties"/>
+     <Wait for="element" afterTime="pass" time="10000" locatorType="xpath" locatorExpression="//ul[@class='custom-menu']/li[@title='Properties']"/>
+     <SwitchToParentWindow />
+     
+</TestCase>
+  

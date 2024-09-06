@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+ 
+  <!-- <Login username="$csv{username}" password="$csv{password}" /> 
+  <ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line"/>
+  <SwitchToWindow/>
+  <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+  <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+  <HandleAlert action="accept"/>
+  <EndStep/>
+  <SwitchToDefaultContent/> -->
+  
+ <!--  <Login username="$csv{username}" password="$csv{password}" /> 
+  <ClickGlobalActionsMenu commandLabel="Library|Create Library|Create Part Library"/>
+  <SwitchToWindow/>
+  <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+  <HandleAlert action="accept"/>
+  <ClickElement locatorType="xpath" locatorExpression="//input[@id='Name']"/>
+  <InputText locatorType="id" locatorExpression="Name" input="Action"/> 
+  <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/> 
+  <Logout/>-->
+    
+    
+    <!-- Attribute=Dismiss -->
+    <Login username="$csv{username}" password="$csv{password}" /> 
+    <ClickGlobalToolsMenu commandLabel="Profile|Refresh My Licenses" highlight="true" style="Calibri Light (Headings)" />
+    <wait time="3000"/>
+    <!-- HandleAlert -->
+    <HandleAlert action="dismiss"/>
+    <Logout/> 
+     
+  </TestCase>

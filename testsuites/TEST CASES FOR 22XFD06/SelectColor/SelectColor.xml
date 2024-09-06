@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+<Login password="$csv{password}" username="$csv{username}"/>
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToFrame name="slideInFrame"/>
+<Wait time="3000"/>
+<ClickElement locatorExpression="//input[@name='autoNameCheck']" locatorType="xpath"/>
+<InputText locatorExpression="VPMProductName1" locatorType="id" input="TestTitle"/>
+<ShowNotification message="Part is creating"/>
+<InputText locatorExpression="DescriptionId" locatorType="id" input="DescriptionId"/>
+<ClickElement locatorExpression="//button[normalize-space()='OK']" locatorType="xpath"/>
+<ShowNotification message="Part is created"/>
+<SwitchToDefaultContent/>
+<SelectColor locatorExpression="//div[@class='topbar-cmd fonticon fonticon-menu menu']" locatorType="xpath" color="#005685"/>
+<Wait time="9000"/>
+
+	
+     </TestCase>

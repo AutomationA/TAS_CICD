@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Suite: TestPlan, Test Case: ClickElement, Status: Pass]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-08-29T14:14:26 IST" name="TestPlan" finished-at="2024-08-29T14:14:42 IST" duration-ms="15658">
+    <groups>
+    </groups>
+    <test started-at="2024-08-29T14:14:26 IST" name="ClickElement" finished-at="2024-08-29T14:14:42 IST" duration-ms="15658">
+      <class name="com.steepgraph.ta.framework.App">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.steepgraph.ta.framework.App@43aaf813]" started-at="2024-08-29T14:14:26 IST" name="beforeTest" finished-at="2024-08-29T14:14:27 IST" duration-ms="432" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3d5790ea]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testsuites\\ClickElement\\ClickElement.xml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="main(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.steepgraph.ta.framework.App@43aaf813]" started-at="2024-08-29T14:14:27 IST" name="main" finished-at="2024-08-29T14:14:42 IST" duration-ms="15044" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testsuites\\ClickElement\\ClickElement.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testsuites\\ClickElement\\ClickElement.csv]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Optional parameter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Suite: TestPlan, Test Case: ClickElement, Status: Pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.steepgraph.ta.framework.App@43aaf813]" started-at="2024-08-29T14:14:42 IST" name="afterTest" finished-at="2024-08-29T14:14:42 IST" duration-ms="150" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3d5790ea]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.steepgraph.ta.framework.App -->
+    </test> <!-- ClickElement -->
+  </suite> <!-- TestPlan -->
+</testng-results>

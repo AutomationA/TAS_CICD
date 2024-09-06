@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+	
+	<Login password="$csv{password}" username="$csv{username}"/>
+	 
+		<SwitchToDefaultContent />
+	<SetStartWindow/>
+	<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" />
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Part"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Part is created"/>
+	<SwitchToDefaultContent/>
+	<ClickCategoryCommand title="Part Specs &amp; Documents"/>
+    <SwitchToDefaultContent/>
+	<UploadFileUsingDragAndDrop path="C:\\Users\\SGSPC053\\Downloads\\Capture.PNG" locatorType="xpath" locatorExpression="//div[@id='divDrag']"/>
+	<!-- <Wait time="50000"/> -->
+	<Wait for="element" afterTime="pass" time="100000" locatorType="xpath" locatorExpression="//span[contains(@title,'Capture.PNG')]"/>
+	<SwitchToDefaultContent/>
+	<ClickPortalCommand title="Reference Documents"/>
+	<SwitchToContentFrame/>
+	<SwitchToDetailsDisplayFrame/>
+	<SwitchToPortalDisplayFrame/>
+	<SwitchToFrame name="ENCReferenceDocuments"/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@id='rmbrow-0,0']" /> 
+	<OpenActionToolbarMenu commandlabel="Remove" targetwindow="popup"/>
+	<Wait time="5000" />
+	<!-- <AssertAlert id="Error message for MOA" action="accept"/>  -->
+	<!-- <AssertAlert id="Error message for MOA" action="dismiss"/>  -->
+	<AssertAlert id="Error message for MOA" action="not present"/>
+	<Wait time="1000"/> 
+		
+</TestCase>

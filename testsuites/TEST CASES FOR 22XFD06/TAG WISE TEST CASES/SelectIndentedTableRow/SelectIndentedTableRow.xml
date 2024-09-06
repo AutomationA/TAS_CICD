@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+	
+	<!-- Select Indented Table Row using criteria level -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="id" locatorExpression="AutoNameSeriesId"/>
+    <InputText locatorType="id" locatorExpression="Name" input="SkateBoard1865"/>
+    <InputText locatorType="id" locatorExpression="VPMProductName1" input=" Assembly"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="B Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+    <ClickElement locatorType="id" locatorExpression="Weight"/>
+    <InputText locatorType="id" locatorExpression="Weight" input="500"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/> -->
+    
+    
+    <!-- CREATE EBOM  -->
+    <!-- <Wait time="5000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='divToolbar']//div[1]//table[1]//tbody[1]//tr[1]//td[1]//img[@src='../common/images/I_CatalogAddPLMItemRef.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='group-body']//label[contains(text(),'New Part...')]"/>
+    <SwitchToDefaultContent/>
+    <SwitchToFrame name="slideInFrame"/>
+    <ClickElement locatorType="name" locatorExpression="autoNameCheck"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+    <InputText locatorType="id" locatorExpression="NoOfParts" input="5"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    <SwitchToDefaultContent/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+    <SelectIndentedTableRow expand="false" id="IT1" criteria="level" isnew="true"/>
+    <SwitchToDefaultContent/> -->
+    
+    
+    
+    
+    <!-- Using Different Attributes Select Indented Table Row using criteria text and isNew -->
+    <!-- <Wait time="5000"/>
+    <ClickMyDeskMenu commandLabel ="Collaboration and Approvals|Member Lists"/>
+	<SwitchToDefaultContent/>
+	<SwitchToFrame name="content"/>
+	<SelectIndentedTableRow expand="false" id="object" criteria="text" selectcheckbox="true" section="freezepan" isnew="false"/>
+	<selectoropennewindentedtablerow criteria="Open"/>
+    <ClickCategoryCommand title="Lifecycle"/>
+    <SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>AEFLifecycleBasic"/>
+    <wait time ="5000"/>
+    <Lifecycle action="promote"/>
+    <wait time ="5000"/> -->
+    
+    
+    <!-- Using Different Attributes Select Indented Table Row using dialog -->
+     <switchToFrame name="content=>frameTable=>portalDisplay=>APPDashboardUserNewDocs"/>
+    <SelectIndentedTableRow expand="false" id="object" criteria="text" selectcheckbox="true" section="freezepan" isnew="false" dialog="true"/>
+    <SwitchToWindow/>
+    <ClickCategoryCommand title="Files"/>
+    <switchToFrame name="content=>detailsDisplay"/>
+    <selectoropennewindentedtablerow criteria="Select"/>
+    <CloseCurrentWindow/>
+    
+	<Logout/>    
+    
+</TestCase>

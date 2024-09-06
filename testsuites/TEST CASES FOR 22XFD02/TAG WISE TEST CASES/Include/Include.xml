@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Using Include Tag -->
+	<!-- BB_of_Create_Model -->
+	<Include filepath="testsuites\Building_Blocks_BB\Create_Model.xml"/>
+	
+	<!-- Promote_created_model -->
+	<ClickElement locatorType="xpath" locatorExpression="//button[@id='catButton']"/>
+    <ClickCategoryCommand title="Lifecycle"/>
+    <SwitchToPortalDisplayFrame/>
+	<switchToFrame name="AEFLifecycleBasic"/>
+    <Lifecycle action="promote"/>
+    <ShowNotification message="Model Version Promoted To Marketing" />
+  
+    <logout/>
+    
+</TestCase>

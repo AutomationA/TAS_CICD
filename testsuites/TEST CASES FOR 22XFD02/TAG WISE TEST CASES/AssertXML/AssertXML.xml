@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- AssertXML -->
+	<!-- <ReadXML unziplocation="C:\Users\SGSPC022\Downloads\CreateDashboard\" unzip="true" id="downloadedFile" fromBrowserDownloadLocation="true" regexExpr="true" downloadFileExt="zip" deleteFile="false"/>
+	<AssertXML refid="downloadedFile" criteria="exist" match="full" xpathExpression="//OpenCompassApp[@appname='3DPlay']" deleteFile="false"/> -->
+	
+	<!-- AssertXML Using different attribute -->
+	<!-- <ReadXML unziplocation="C:\Users\SGSPC022\Downloads\CreateDashboard\" unzip="true" id="downloadedFile" fromBrowserDownloadLocation="true" regexExpr="true" downloadFileExt="zip" deleteFile="false"/>
+	<AssertXML refid="downloadedFile" criteria="notexist" match="Partial" xpathExpression="//OpenCompassApp[@appname='Requirement']" regexExpr="true" deleteFile="true" /> -->
+	
+	<ReadXML unziplocation="C:\" unzip="true" id="downloadedFile" fromBrowserDownloadLocation="true" regexExpr="true" downloadFileExt="zip" deleteFile="false"/>
+	<AssertXML refid="downloadedFile" criteria="exist" match="full" xpathExpression="//OpenCompassApp[@appname='3DPlay']" deleteFile="false"/> 
+	<AssertXML refid="downloadedFile" criteria="notexist" match="partial" regexExpr="true" deleteFile="false" xpathExpression="//OpenCompassApp[@appname='3DPlay']"/>
+	
+	<Logout/>   
+    
+</TestCase>

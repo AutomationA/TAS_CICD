@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+<Login password="$csv{password}" username="$csv{username}"/>
+
+
+ <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+  <!--  <AssertListValues locatorType="id" locatorExpression="AutoNameSeriesId" criteria="contains" id="AutoNameSeries"/>  -->
+   <!--  <AssertListValues locatorType="id" locatorExpression="AutoNameSeriesId" criteria="not contains" highlight="true" input="M Series" /> -->
+    <AssertListValues locatorType="id" locatorExpression="AutoNameSeriesId" criteria="not equal" highlight="true" input="M Series" />
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+   
+  
+     <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/> 
+
+
+
+<Logout/>
+
+
+</TestCase>
+
+
+
+
+
+
+
+
+
+
+

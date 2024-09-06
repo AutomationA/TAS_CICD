@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login password="$csv{password}" username="$csv{username}"/>
+	<ClickGlobalActionsMenu commandLabel="Project|Create Project|New"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+    <SwitchToParentWindow/>
+    <SwitchtoDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[normalize-space()='Schedule']"/>
+    <SwitchToFrame name="content"/>
+	<SwitchToFrame name="detailsDisplay"/>
+	<SwitchToFrame name="portalDisplay"/>
+	<SwitchToFrame name="PMCWBS"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='displayModeMenu']//img[1]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionEdit.png']"/>
+	<SelectIndentedTableRow expand="false" id="row" criteria="level" /> 
+	<!-- <EditIndentedTableRow position="8" refid="row" action="select"  insideFreezePane="false" id="EUECCN"/>  -->
+    <Wait time="3000"/> 
+    <CheckIndentedTableRow position="12" refid="row" criteria="editable" columnlabel="End Date" insideFreezePane="false"/>
+    <CheckIndentedTableRow position="16" refid="row" criteria="noneditable" columnlabel="Level" insideFreezePane="false"/>
+    <CheckIndentedTableRow position="3" refid="row" criteria="visible" columnlabel="Id" insideFreezePane="false"/>
+    <CheckIndentedTableRow position="1" refid="row" criteria="visible" columnlabel="Name" insideFreezePane="true"/>
+    <CheckIndentedTableRow position="4" refid="row" criteria="invisible" columnlabel="Critical Task" insideFreezePane="false"/>
+    <EditIndentedTableRow id="SE Export Authorization Status" action="date" refid="row" position="12"/>
+  
+</TestCase> 

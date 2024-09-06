@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Switch To Details Display Frame -->
+	<ClickGlobalActionsMenu commandLabel="Product Line|Create Product Line" />
+	<SwitchToWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+	<InputText locatorType="id" locatorExpression="MarketingName" input="Market1"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<SwitchToParentWindow/>
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@id='catButton']"/>
+	<ClickCategoryCommand title="Product Lines"/>
+	<SwitchToDetailsDisplayFrame/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='chkList']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionProductLine.png'][1]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='menu-panel page']//label[contains(text(),'Add Existing')]"/>
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="(//span[@title='Close'])[1]"/>
+    <SwitchToDefaultContent/>
+	<Logout/>   
+    
+</TestCase>

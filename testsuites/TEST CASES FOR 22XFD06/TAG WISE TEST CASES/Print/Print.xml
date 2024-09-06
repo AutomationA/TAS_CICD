@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	 <Login password="$csv{password}" username="$csv{username}"/>
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow/>
+    <AssertListValues locatorType="id" locatorExpression="AutoNameSeriesId" criteria="contains" id="AutoNameSeries"/>
+	<ClickElement locatorType="id" locatorExpression="AutoNameSeriesId"/>
+	<InputText locatorType="id" locatorExpression="Name" input="SkateBoard18678"/>
+	<InputText locatorType="id" locatorExpression="VPMProductName1" input=" Assembly"/>
+	<SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="A Series"/>
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+	<SelectElement locatorType="id" locatorExpression="ReleaseProcessId" input="Production"/>
+	<ClickElement locatorType="id" locatorExpression="Weight"/> 
+	<InputText locatorType="id" locatorExpression="Weight" input="500"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<SwitchToDefaultContent/>
+	<SwitchToWindow title="3DEXPERIENCE Platform"/>
+	<Print expression="$currentWindow"/> 
+	
+	
+	<!-- Attribute=CurrentFrame -->
+	<!-- <Login password="$csv{password}" username="$csv{username}"/>
+	<ClickGlobalActionsMenu commandLabel="Project|Create Program"/>
+	<SwitchToSlideInWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@id='Name']"/>
+	<InputText locatorType="id" locatorExpression="Name" input="action"/>
+	<Print expression="$currentFrame"/>
+	<ClickElement locatorType="xpath" locatorExpression="//textarea[@id='DescriptionId']"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="action"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+	<SwitchToDefaultContent/> -->
+	
+</TestCase>

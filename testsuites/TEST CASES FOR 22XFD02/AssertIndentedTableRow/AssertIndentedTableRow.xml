@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+     <Login password="$csv{password}" username="$csv{username}"/>
+     <SwitchToDefaultContent/>
+     <!-- <Wait time="1000"/>
+     <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+     <SwitchToSlideInWindow/>
+     <ClickElement locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" locatorType="xpath"/>
+     <InputText locatorExpression="DescriptionId" locatorType="id" input="Part"/>
+     <HighlightElement locatorExpression="DescriptionId" locatorType="id" id="DescriptionId"/>
+     <ClickElement locatorExpression="//button[@class='btn-primary']" locatorType="xpath"/>
+     <ShowNotification message="Part is created"/>
+     <SwitchToDefaultContent/>
+     <ClickCategoryCommand title="Engineering BOM"/>
+     <SwitchToPortalDisplayFrame/>
+     <SwitchToFrame name="ENCBOM"/>
+     <ClickElement locatorExpression="displayModeMenu" locatorType="id"/>
+     <ClickElement locatorExpression="//label[contains(text(),'Table')]" locatorType="xpath"/>
+     <Wait time="2000"/>
+     <SwitchToPortalDisplayFrame/>
+     <ClickElement locatorExpression="//div[@id='divPvChannel-1-1']//div[@class='window-size btn-maximize']" locatorType="xpath"/>
+     <Wait time="2000"/>
+     <SwitchToPortalDisplayFrame/>
+     <SwitchToFrame name="ENCBOM"/>
+     <ClickElement locatorExpression="//div[@id='divToolbar']//div[@class='toolbar']//table//tbody//td[@title='Expand All']//img[1]" locatorType="xpath"/>
+     <SelectIndentedTableRow id="Row" criteria="level" expand="false"/>
+     <AssertIndentedTableRow id="Title" criteria="Text" insideFreezePane="True" highlight="true" position="8" condition="=" refid="Row"/>
+     <AssertIndentedTableRow position="8" refid="Test" id="TestText" attribute="title" criteria="attribute" condition="="/>
+     <AssertIndentedTableRow position="8" refid="Row" id="text" criteria="text" condition="=" insideFreezePane="false" highlight="true"/>
+     <Wait time="1000"/>
+     <AssertIndentedTableRow refid="Row" id="Qty" condition="=" position="10" criteria="text" highlight="false" insideFreezePane="false" />
+     <SwitchToDefaultContent/>
+     <Wait time="1000"/> -->
+
+
+
+    <ClickGlobalActionsMenu commandLabel="Engineering|Specifications|Create Part Specification" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Part Specification is created"/>
+    <SwitchToDefaultContent/>
+	<ClickCategoryCommand title="Change Management"/>
+    <SwitchToPortalDisplayFrame/>
+    <!-- <SwitchToFrame name="ECMCOs"/> -->
+    <SwitchToFrame name="ECMCAs"/>
+    <!-- <ClickElement locatorExpression="ECMAddToNewCO" locatorType="id"/> -->
+    <ClickElement locatorType="id" locatorExpression="ECMAddToNewCA" />
+    <SwitchToDefaultContent/>
+    <SwitchToFrame name="slideInFrame"/>
+    <!-- <InputText locatorExpression="Title" locatorType="name" input="Part"/> -->
+    <InputText locatorExpression="Abstract" locatorType="name" input="Part"/>
+    <InputText locatorExpression="DescriptionId" locatorType="id" input="Change mangement for part created"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <SwitchToDefaultContent/>
+    <!-- <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ECMCOs"/> -->
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ECMCAs"/>
+    <SelectIndentedTableRow id="row" criteria="level" expand="false"/>
+   <!--  <AssertIndentedTableRow position="10" refid="row" id="text" criteria="attribute" attribute="title" condition="=" insideFreezePane="false" highlight="true"/> -->
+    <AssertIndentedTableRow position="9" refid="row" id="text" criteria="attribute" attribute="title" condition="=" insideFreezePane="false" highlight="false"/>
+	<Logout preCheck="true"/>
+	
+</TestCase>

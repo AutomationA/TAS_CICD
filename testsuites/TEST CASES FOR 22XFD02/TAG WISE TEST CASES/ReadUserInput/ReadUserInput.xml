@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+ <Login password="$csv{password}" username="$csv{username}"/>
+ 
+      <ReadUserInput/>
+      <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+      <SwitchToSlideInWindow/>
+      <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+      <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/> 
+	
+ </TestCase>

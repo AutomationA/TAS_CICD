@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+    <Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Select And Submit 6WTags Search -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Change|Create Change Action" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@value='...']" />
+	<SwitchToWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='radType']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<switchToParentWindow/>
+	<SwitchToSlideInWindow />
+	<InputText locatorType="name" locatorExpression="Abstract" input="TestTitle"/>
+    <InputText locatorType="name" locatorExpression="Description" input="Description to product"/>
+    <ScrollToElement locatorType="xpath" locatorExpression="//label[@for='Reviewers']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//a[@href='javascript:addReviewSelectors()']"/>
+    <SwitchToDefaultContent/>
+    <Wait time="2000"/>
+    <GlobalSearch id="Approver"/>
+    <Wait time="2000"/>
+    <SwitchToDefaultContent />
+    <ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']" />
+    <ClickElement locatorType="xpath" locatorExpression="//li[@name='table']/span" />
+    <Wait time="2000"/>
+    <SelectAndSubmit6WTagsSearch selection="single" id="Approver1" submitLabel="OK" columnName="Type" columnValue="Person"/>
+    <switchToParentWindow/>
+	<SwitchToSlideInWindow />
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+    <SwitchToDefaultContent /> 
+    <Logout/>-->  
+    
+    
+
+    <!-- <SwitchToDefaultContent />
+    <Wait time="5000" />
+    <OpenCompassApp quadrant="east" appname="Variant Management" />
+    <SwitchToWindow/>
+    <Wait time="1000" />
+    <ClickElement locatorType="xpath" locatorExpression="//label[normalize-space()='Builds']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOVAMA_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionCreate.png']"/>
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='btnProductChooser']"/>
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fonticon fonticon-view-list']"/>
+    <SelectAndSubmit6WTagsSearch id="Approver3" columnValue="A" columnName="Revision" submitLabel="OK" selection="single"/>
+    <Wait time="5000" /> -->
+    
+
+    <!-- <SwitchToDefaultContent />
+    <Wait time="5000" />
+    <OpenCompassApp quadrant="east" appname="Variant Management" />
+    <SwitchToWindow/><Wait time="1000" />
+    <ClickElement locatorType="xpath" locatorExpression="//label[normalize-space()='Builds']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOVAMA_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='../common/images/iconActionCreate.png']"/>
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='btnProductChooser']"/>
+    <SwitchToWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fonticon fonticon-view-list']"/>
+    <GlobalSearch id="Approver2"/>
+    <SelectAndSubmit6WTagsSearch id="Approver2" columnValue="A" columnName="Revision" submitLabel="OK" selection="single"/> -->
+
+
+    <SwitchToDefaultContent/>
+    <Wait time="5000"/>
+    <ClickGlobalActionsMenu commandLabel="Product Line|Create Build"/>
+    <SwitchToWindow/>
+    <ScrollToElement locatorExpression="//label[@for='DesignResponsibility']" locatorType="xpath"/>
+    <ClickElement locatorExpression="//input[@name='btnDesignResponsibility']" locatorType="xpath"/>
+    <SwitchToWindow/>
+    <ClickElement locatorExpression="//label[@id='switch-view-button']" locatorType="xpath"/>
+    <ClickElement locatorExpression="//span[@class='fonticon fonticon-view-list']" locatorType="xpath"/>
+    <GlobalSearch id="Approver4"/>
+    <SelectAndSubmit6WTagsSearch id="Approver5" selection="single" submitLabel="OK" columnName="Type" columnValue="Plant"/>
+    
+
+    
+    
+</TestCase>
+	

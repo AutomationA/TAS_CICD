@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+	
+	<!-- TAG="InputWindowElement ,attribute="id , skiperror  --> 
+  <Login password="$csv{password}" username="$csv{username}"/>
+  <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+  <SwitchToSlideInWindow/>
+  <ClickElement locatorExpression="//input[@name='autoNameCheck']" locatorType="xpath"/>
+  <InputText locatorExpression="VPMProductName1" locatorType="id" input="TestTitle"/>
+  <InputText locatorExpression="DescriptionId" locatorType="id" input="DescriptionId"/>
+  <ClickElement locatorExpression="//button[normalize-space()='OK']" locatorType="xpath"/>
+  <SwitchToDefaultContent/>
+  <ClickCategoryCommand title="Part Specs &amp; Documents"/>
+  <ClickPortalCommand title="Reference Documents"/>
+  <SwitchToPortalDisplayFrame/>
+  <SwitchToFrame name="ENCReferenceDocuments"/>
+  <OpenActionToolbarMenu commandlabel="Create Document..."/>
+  <SwitchToWindow/>
+  <Wait time="5000"/>
+  <ClickElement locatorExpression="//button[@class='btn-primary']" locatorType="xpath"/>
+  <Wait time="4000"/>
+  <ClickWindowElement imagepath="C:\\Users\\SGSPC051\\Downloads\\Capture1.PNG" skiperror="false" id="OK"/>
+  <InputWindowElement imagepath="C:\\Users\\SGSPC051\\Downloads\\Capture2.PNG" skiperror="false" id="uploadPath"/> 
+  <ClickWindowElement imagepath="C:\\Users\\SGSPC051\\Downloads\\Capture3.PNG" skiperror="false"/>
+  <Wait time="10000"/> 
+ 
+  
+ </TestCase>

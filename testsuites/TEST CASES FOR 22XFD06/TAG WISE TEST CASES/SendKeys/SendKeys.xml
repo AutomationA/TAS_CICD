@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	
+    <!--  Send Keys used as input tag -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+	<Sendkeys key="Test1" locatorExpression="//textarea[@id='DescriptionId']" locatorType="xpath"/>	
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button' and @class='btn-primary']" /> -->
+    
+    
+    <!-- Using Different Attributes send Key using keyboard key -->
+    <switchToFrame name="content=>frameTable=>portalDisplay=>APPDashboardUserNewDocs"/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='emxTableRowIdActual']" />
+    <SendKeys locatorType="xpath" locatorExpression=" " key="CONTROL+END" />
+    
+    <Logout/>   
+    
+</TestCase>
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+	<Wait time="2000"/>
+	<SwitchToDefaultContent/>	
+	<ClickGlobalToolsMenu commandLabel="Profile|Messages"/>
+  	<SelectSecurityContext collaborativeSpace="Default" organization="Company Name" role="Administrator"/> 
+  	
+  	
+	<optionalStart/>
+	
+	  	<Wait time="2000"/>
+		<SelectSecurityContext collaborativeSpace="Product Requirement" organization="Company Name" role="Author"/> 
+		
+		<GlobalSearch id="BL"/>
+		<Wait time="5000" />
+	   
+	    <OpenSearchResult id="BL" criteria="text" column="Type" value="$csv{type}"/>	
+	    <Wait time="5000" />
+	    
+	    <ClickElement locatorType="xpath" locatorExpression="Testing"/>
+	    
+	 <optionalClose/>
+	 
+    <SwitchToDefaultContent/>	
+    <Assert locatorExpression="//span[@class='extendedHeader type-name']" condition="=" criteria="text" locatorType="xpath" id="AssertValue"/>
+	
+	<Logout/>   
+   
+</TestCase>
+	

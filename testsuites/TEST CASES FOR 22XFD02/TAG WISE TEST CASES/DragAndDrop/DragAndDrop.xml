@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+  
+ <OpenCompassApp quadrant="East" appname="Collaborative Lifecycle" appIndex="1"/>
+ <switchToWindow/>
+ <!-- for 21x -->
+ <!-- <ClickElement locatorType="xpath" locatorExpression="//span[@class='preview-icon fonticon fonticon-pin']"/> -->
+ <!-- for 22x -->
+  <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']"/>
+ <Wait time="10000"/>
+ 
+ <OpenCompassApp quadrant="East" appname="Change Action" appIndex="2" />
+ <!--for 21x  -->
+<!--  <ClickElement locatorType="xpath" locatorExpression="//span[@class='preview-icon fonticon fonticon-pin']"/> -->
+<!--for 22X  -->
+  <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+ <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']"/>
+ <Wait time="60000"/>
+
+<FindElement locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOWCHA_AP')]" id="iframe1"/>
+<FindElement locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENOLCMI_AP')]" id="iframe2"/>
+<!-- for 21x -->
+<!-- <DragAndDrop wait="5000" locatorType='xpath' sourceLocatorExpression="//span[normalize-space()='CA_31161063_00000052']" targetLocatorExpression="//div[contains(@class,'main-frame')]//ol" sourceFrameRefId="iframe1"  targetFrameRefId="iframe2" mode="robot"/> -->
+<!-- for 22x -->
+<DragAndDrop wait="5000" locatorType="xpath" sourceLocatorExpression="//span[normalize-space()='CA-70002171-00000002']" targetLocatorExpression="//div[@class='sentence-text wux-icon-gray']" sourceFrameRefId="iframe1"  targetFrameRefId="iframe2" mode="robot"/>
+
+<SwitchToDefaultContent/>
+<switchToParentWindow/> 
+  
+ 
+
+
+ </TestCase>	

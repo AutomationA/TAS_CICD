@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Select Security Context -->
+	<SelectSecurityContext organization="Company Name" collaborativeSpace="Common Space" role="Leader"/>
+	<ClickGlobalActionsMenu commandLabel="Engineering|Specifications|Create Part Specification" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']" />
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Specification is Created" />
+    <SwitchToParentWindow/>
+    
+    <logout/>
+
+	
+</TestCase>

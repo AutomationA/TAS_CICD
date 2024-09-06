@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+    <Login password="$csv{password}" username="$csv{username}"/>
+    <SwitchToDefaultContent />
+    
+    <!-- SelectDate in Normal Scenario -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Change|Create Change Action" />
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//input[@value='...']" />
+	<OpenChooser fieldlabel="Type"/>
+	<SwitchToWindow/>
+	<ClickElement locatorType="xpath" locatorExpression="//input[@name='radType']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<switchToParentWindow/>
+	<SwitchToSlideInWindow />
+    <InputText locatorType="name" locatorExpression="Abstract" input="TestTitle"/>
+    <InputText locatorType="name" locatorExpression="Description" input="Description to product"/>
+    <ScrollToElement locatorType="xpath" locatorExpression="//input[@title='Estimated Start']"/>
+    <SelectDate locatorType="xpath" locatorExpression="//a[@name='EstimatedStartDate_date']" id="Estimated_Start"/>
+    <SelectDate locatorType="xpath" locatorExpression="//a[@name='Estimated Completion Date_date']" id="Due_Date"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+    <SwitchToDefaultContent /> -->
+    
+    
+    <!-- SelectDate Tag in Dashboard -->
+    <!-- <SwitchToDefaultContent />
+    <SetStartWindow/>
+    <OpenCompassApp quadrant="east" appname="3DDashboard" />
+    <wait time="3000"/>
+    <SwitchTowindow/>
+    <wait time="3000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENORETV_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@class='wux-datagridview-selection-label'][normalize-space()='1']"/>
+    <wait time="3000"/>
+    <OpenNewToolbarInDashboard toolbarName="Change" actionmenu="Add To New Change Action" />
+    <wait time="5000"/>
+    <InputText locatorType="id" locatorExpression="Abstract" input="TestTitle"/>
+    <SelectDate locatorType="xpath" locatorExpression="//input[@class='input-date input-date-root form-control form-control-root']" id="Due_Date" isDashboard="true"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Save as Draft']"/>
+    <SwitchToStartWindow/>
+     -->
+    
+    
+    <setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<!-- <ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/> -->
+	<CreateDashboard input ="Test1"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Component Request Management"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENXNCRQ_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'New Component Request')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Component Introduction Request')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn btn-primary']"/>
+    <InputText locatorType="name" locatorExpression="title" input="Market1"/>
+    <ScrollToElement locatorType="xpath" locatorExpression="//input[@name='SRC Production Plan Date']"/>
+    <SelectDate locatorType="xpath" locatorExpression="//input[@id='input-98bcd5']" id="Development Plan Date" isDashboard="true"/>
+    <SelectDate locatorType="xpath" locatorExpression="//input[@id='input-5fdf7b']" id="Production Plan Date" isDashboard="true"/>
+    <CloseCurrentWindow />
+    <SwitchToStartWindow />
+    <Logout />
+   
+</TestCase>

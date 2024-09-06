@@ -1,0 +1,2 @@
+"password","username","PartName","Execution Status","Execution Failure Reason(if any)","Notes(if any)"
+"password","username","PartName","FAIL","session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 105. Refer to Logs for full details.","Notes(if any)"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+    <OpenCompassApp quadrant="East" appname="3DDashboard"/>
+
+<switchToWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//span[@class='icon fonticon fonticon-plus']"/>  
+<!--   <ClickElement locatorType="xpath" locatorExpression="//div[@id='compass_ctn']"/> -->
+<OpenCompassApp quadrant="East" appname="Compare"/>
+<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']"/>
+<Wait time="10000"></Wait>
+<DeleteCurrentTabInDashboard/>
+<switchToParentWindow/>
+<logout/>
+<Wait time="10000">
+</Wait>
+</TestCase>	
+	
+	

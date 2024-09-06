@@ -1,0 +1,2 @@
+"username","password","Execution Status","Execution Failure Reason(if any)","Notes(if any)"
+"username","password","FAIL","unknown error: net::ERR_INTERNET_DISCONNECTED. Refer to Logs for full details.","Notes(if any)"

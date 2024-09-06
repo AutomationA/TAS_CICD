@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+
+    <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToSlideInWindow />
+	<ClickElement locatorType="xpath" locatorExpression="//table[@class='form']//input[@name='autoNameCheck']" />
+	
+	<InputText locatorType="id" locatorExpression="DescriptionId" input="Part"/>
+	<HighlightElement locatorType="id" locatorExpression="DescriptionId" id="DescriptionId"/>
+	
+	<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+	<ShowNotification message="Part is created"/>
+	
+	<SwitchToDefaultContent/>
+	
+    <ClickCategoryCommand title="Engineering BOM"/>
+	<SwitchToPortalDisplayFrame/>
+    <SwitchToFrame name="ENCBOM"/>
+    <ClickElement locatorType="id" locatorExpression="displayModeMenu"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Table')]"/>
+    <Wait time="2000"/>
+    <SwitchToParentFrame/>
+    
+    
+    
+
+<SwitchToDefaultContent/>
+<logout/>
+</TestCase>

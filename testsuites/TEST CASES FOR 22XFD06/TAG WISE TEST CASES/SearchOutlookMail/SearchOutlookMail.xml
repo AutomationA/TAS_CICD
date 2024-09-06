@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	
+	<!-- TAG="SearchOutlookMail" -->
+	 <openURL url="https://outlook.live.com/owa/" target="tab" />
+     <OutlookLogin username="$csv{username}" password="$csv{password}" wait="$csv{if_wait}"/>
+     
+     <!-- SearchOutlookMail -->
+     <SearchOutlookMail searchText="$csv{Esearchtex}" searchMailId="$csv{Esearchmail}"/>
+	 <OutlookLogout target="self" username="varsha@steepgraph.com"  />
+	
+  </TestCase>

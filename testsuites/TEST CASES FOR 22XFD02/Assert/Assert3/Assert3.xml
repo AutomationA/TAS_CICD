@@ -1,0 +1,54 @@
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../resources/main/TestAutomationFramework.xsd">
+
+   <Login username="$csv{username}" password="$csv{password}"/>
+   <SwitchToDefaultContent/>
+   
+   <!-- Assert were disable value is disable -->
+   <!-- <ClickElement locatorType="xpath" locatorExpression="//div[@class='fonticon fonticon-down-open item-actions-holder ']" />
+   <ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='Common Space']" /> -->
+   <!--  <ClickElement locatorType="xpath" locatorExpression="//div[@class='profile topbar-menu-item topbar-cmd enabled fonticon fonticon-user-alt active']" />
+   <ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='My Credentials']" /> -->
+   <!-- <Assert locatorExpression="//input[@id='Project'][@value='Common Space']" id="CheckPart" condition="contains" disabled="true" attribute="value" criteria="text" locatorType="xpath" highlight="true"/>
+   <Assert locatorExpression="//input[@id='Organization_txt'][@value='Company Name']" id="CheckPart" condition="contains" disabled="true" attribute="value" criteria="text" locatorType="xpath" highlight="true"/> -->
+   <!-- <Assert locatorExpression="//input[@id='Role_txt'][@value='Leader']" id="CheckPart" condition="contains" disabled="true" attribute="value" criteria="text" locatorType="xpath" highlight="true"/> -->
+   <!-- <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" /> -->
+  
+  
+    <setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<CreateDashboard input ="Test"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Component Request Administration"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable ']"/>
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENXCRMA_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@id='RequestTemplates']//section[@class='activity-tooltip-element']"/>
+    <FindElement locatorType="xpath" locatorExpression="//div[@cell-id='0']" id="click"/>
+    <Action name="doubleclick" refid="click"/>
+    <!-- <ClickElement locatorType="xpath" locatorExpression="//li[@id='editMode']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//select[@name='Require Impacted Items']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//option[@value='TRUE']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//li[@id='createNPRTemplate']"/> -->
+    
+    <Wait time="2000" />
+    <Wait time="1000" />
+    <Assert locatorType="xpath" locatorExpression="//div[@class='autocomplete src-multi-select-autocomplete']" id="CheckPart" criteria="text" condition="="/>
+    <Assert locatorType="xpath" locatorExpression="//input[@placeholder=' Type here to search request assignee']" id="CheckPart1" criteria="text" condition="="/>
+    <!-- <Assert locatorExpression="wux-ui-state-undefined form-control form-control-root" id="CheckPart" Index="0" Function=".value"  condition="=" disabled="true"  criteria="text" locatorType="ClassName" highlight="true"/>
+     -->   
+    <SwitchToStartWindow />
+    <Wait time="2000" />
+    <Wait time="1000" />
+    <Wait time="1000" />
+    <Wait time="1000" />
+    
+	
+    <Logout/>
+
+</TestCase>

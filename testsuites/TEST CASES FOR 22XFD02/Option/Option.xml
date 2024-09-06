@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+
+ <Login password="$csv{password}" username="$csv{username}" />
+<ClickGlobalActionsMenu commandLabel="Issues|Create Change Action"/>
+<SwitchToSlideInWindow />
+<ClickElement locatorType="xpath" locatorExpression="//input[@id='Abstract']"/>
+<InputText locatorType="id" locatorExpression="Abstract" input="Part"/>
+<ClickElement locatorType="xpath" locatorExpression="//a[normalize-space()='Add Assignee']"/>
+<SwitchToWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']"/>  
+<ClickElement locatorType="xpath" locatorExpression="//li[@name='table']/span"/>  
+<ClickElement locatorType="xpath" locatorExpression="//div[@draggable='true']//div[@class='wux-ui-fa wux-icon']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[@id='id_in_app_ok']"/>  
+<SwitchToWindow/>
+<SwitchToFrame name="slideInFrame" />
+
+<!-- option -->
+<!-- for22x this is required -->
+<!-- <option selectList="3D EXP01,Test Everything,3D EXP02,Administration User,Admin Platform" selectBoxName="Contributor"/>-->
+<!-- for22x this is required -->
+<option selectList="3D EXP01,Test Everything,Administration User,Admin Platform" selectBoxName="Contributor"/>
+<ClickElement locatorType="xpath" locatorExpression="//a[@href='javascript:removeContributor()'][normalize-space()='Remove']"/>  
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/> 
+
+
+<!-- attribute="option selectList and selectBoxid" -->
+
+<!-- <Login username="$csv{username}" password="$csv{password}" />  
+<ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+<SwitchToSlideInWindow/>
+<ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='OK']"/>
+<SwitchToParentWindow/>
+<SwitchToDefaultContent/>
+<SwitchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCRelatedItem"/>
+<ClickElement locatorType="xpath" locatorExpression="//td[@title='Customize']"/>    
+<SwitchToWindow/>
+<SwitchToFrame name="customTable"/>
+<FindElement locatorType="xpath" locatorExpression="//input[@id='txtCustomTextBox']" input="Action"/> -->
+
+<!-- option Attribute= selectList , selectBoxId -->
+<!-- <option selectList="Type,Revision,State,Related Context" selectBoxId="VisibleColumn"/>
+<SwitchToDefaultContent/>
+<ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Done']"/> -->
+
+ </TestCase>
+ 

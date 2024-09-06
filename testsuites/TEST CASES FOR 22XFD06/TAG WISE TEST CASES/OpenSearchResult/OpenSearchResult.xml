@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+ 
+ 
+
+  	<!-- <Login username="$csv{username}" password="$csv{password}" />  
+  	<GlobalSearch id="Search_Object_Name"/> -->
+    <!-- OpenSearchResult -->
+  	<!-- <OpenSearchResult id="Search_Object_Name" criteria="text" column="Type" value="$csv{ObjectRevision}"/>  
+  	<Wait time="3000"/> --> 
+ 
+ 	<!-- Using different attribute Attribute= criteria -->
+ 	<Login username="$csv{username}" password="$csv{password}" />  
+ 	<GlobalSearch id="PartName" type="All" searchtype="Search"/>
+ 	<OpenSearchResult id="Search_Object_Name1" criteria="row-number" column="Type" value="$csv{ObjectRevision}"/> 
+ 	<wait time="1000"/>
+ 	<Logout/>
+ 	
+ </TestCase>
+ 

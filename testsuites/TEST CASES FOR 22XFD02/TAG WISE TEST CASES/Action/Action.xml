@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<Wait time="1000"/>
+  	<!--  <ClickMyDeskMenu commandLabel="Change Management|My Changes"/>
+  	<SwitchToDefaultContent/>
+  	<SwitchToFrame name="content=>portalDisplay=>ECMMyChangeActions"/>	
+  	<Wait time="3000"/>
+	<FindElement locatorType="name" locatorExpression="emxTableRowIdActual" id="properties"/>
+	<Action name="rightclick" refid="properties"/>
+	
+	<SwitchToFrame name="ECMMyChangeActions"/>
+	(//div/div/ul/li/a/label[contains(text(),'Properties')])
+	<Wait for="element" afterTime="pass" time="10000" locatorType="xpath" locatorExpression="//ul[@class='custom-menu']/li[@title='Properties']"/> 
+	<ClickElement locatorType="xpath" locatorExpression="//ul[@class='custom-menu']/li[@title='Properties']"/>
+<SwitchToParentWindow/>
+	 -->
+	
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+	<SwitchToFrame name="slideInFrame"/>
+	<Wait time="3000"/>
+	<FindElement locatorType="id" locatorExpression="AutoNameSeriesId" id="AutoNameSeries"/>
+	<Action name="input" refid="AutoNameSeries" id="AutoNameSeriesId"/>
+	
+	<Wait time="2000"/>
+<ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']"/>
+	<ShowNotification message="Part is created"/>
+	<SwitchToDefaultContent/> -->
+
+<!-- <Wait time="1000"/>
+<SwitchToDefaultContent />
+<SelectColor color="#005685" locatorType="xpath" locatorExpression="//div[@class='topbar-cmd fonticon fonticon-menu menu']"/>
+<Wait time="9000"/>
+<GlobalSearch id="Search_Object_Name"/>
+<OpenSearchResult id="Search_Object_Name" criteria="text" column="Type" value="$csv{ObjectRevision}"/><Wait time="3000"/>
+<ClickCategoryCommand title="Part Specs &amp; Documents"/>
+<ClickPortalCommand title="Reference Documents"/>
+<SwitchToPortalDisplayFrame/><SwitchToFrame name="ENCReferenceDocuments"/>
+<Print expression="$currentFrame"/>
+<IF locatorType="xpath" locatorExpression="//a[normalize-space()='DOC-11585678-0000026']" criteria="visible" condition="=" id="Model"/>
+<Include filepath="testsuites/22x TAG Testing For TAS Tool/include/include.xml"/>
+<ELSEIF locatorType="xpath" locatorExpression="//a[normalize-space()='DOC-11585678-0000028']" criteria="visible" condition="=" id="Model"/>
+<SelectIndentedTableRow expand="false" id="SelectDOC" criteria="level"/>
+<OpenActionToolbarMenu commandlabel="Remove" targetwindow="popup"/>
+<Wait time="5000" />
+<HandleAlert action="accept"/><AssertAlert action="present" />
+<AssertAlert id="Error message for MOA" action="accept"/
+><Wait time="1000"/><ELSE/><SwitchToDefaultContent/>
+<UploadFileUsingDragAndDrop path="C:\\Users\\SGSPC045\\Downloads\\Capture3.PNG" locatorType="xpath" locatorExpression="//div[@id='divDrag']"/>
+<Wait time="6000"/>
+<SwitchToParentWindow/>
+<Print expression="$currentWindow"/>
+<ENDIF/> -->
+
+
+<!-- <SwitchToDefaultContent/>
+<ClickMyDeskMenu commandLabel="Change Management|My Changes"/>
+<SwitchToDefaultContent/>
+<SwitchToFrame name="content=>portalDisplay=>ECMMyChangeActions" />
+<Wait time="3000"/>
+<FindElement locatorType="name" locatorExpression="emxTableRowIdActual" id="properties"/>
+<Action name="rightclick" refid="properties"/>
+<Wait for="element" afterTime="pass" time="10000" locatorType="xpath" locatorExpression="//ul[@class='custom-menu']/li[@title='Properties']"/>
+<ClickElement locatorType="xpath" locatorExpression="//ul[@class='custom-menu']/li[@title='Properties']"/> -->
+
+
+<ClickGlobalActionsMenu commandLabel="Change|Create Change Action"/>
+<SwitchToSlideInWindow/>
+<!-- <InputText locatorType="name" locatorExpression="Abstract" input="Part1"/> -->
+<FindElement id="Title" locatorExpression="#Abstract" locatorType="cssselector"/>
+<Action id="Data" refid="Title" name="input"/>
+<InputText locatorExpression="DescriptionId" locatorType="id" input="Description"/>
+<FindElement id="OKBtn" locatorExpression="button[class='btn-primary']" locatorType="cssselector"/>
+<Action refid="OKBtn" name="click"/>
+<SwitchToParentWindow/>
+
+<!-- <GlobalSearch id="object" type="All" searchtype="Search"/><ClickElement locatorType="xpath" locatorExpression="//div[@class='show-more type-show-more']" />
+<ClickElement locatorType="xpath" locatorExpression="//li[@id='id_1724702779']" />
+<FindElement locatorType="cssselector" locatorExpression=".wux-controls-abstract.wux-layouts-collectionview-cell.wux-layouts-datagridview-cell.wux-layouts-datagridview-row-header-cell[is-visible='true'][cell-id='16']" id="no1"/><Action name="RightClick" refid="no1"/>
+<ClickElement locatorType="xpath" locatorExpression="//li[@id='action_DisplayDetails']" />
+<SwitchToDefaultContent/>
+<ClickHomeMenu commandLabel="Home" /> -->
+<!-- <SwitchToFrame name="content=>frameTable=>portalDisplay=>APPDashboardUserNewDocs"/>
+<FindElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionFindInStructure.png']" id="TMCMyDesk"/>
+<Action name="Doubleclick" refid="TMCMyDesk"/> -->
+	<Logout/>   
+	</TestCase>

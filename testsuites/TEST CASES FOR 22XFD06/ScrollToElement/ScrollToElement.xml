@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent />
+	
+	<!-- Scroll To Element vertically -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Change|Create Change Order" />
+    <SwitchToSlideInWindow/>
+    <InputText locatorType="id" locatorExpression="Title" input="Market1"/>
+    <ScrollToElement locatorType="xpath" locatorExpression="//label[@for='InformedUsersWithGroup']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary']" />
+    <ShowNotification message="Model is Created" />
+    <SwitchToParentWindow/> -->
+	
+	
+	
+	<!-- Using Different Attributes Scroll To Element horizontally -->
+	<!-- <ClickGlobalActionsMenu commandLabel="Engineering|Part|Create Part"/>
+    <SwitchToSlideInWindow/>
+    <ClickElement locatorType="xpath" locatorExpression="//input[@name='autoNameCheck']"/>
+    <SelectElement locatorType="id" locatorExpression="AutoNameSeriesId" input="B Series"/>
+    <InputText locatorType="id" locatorExpression="DescriptionId" input="Build SkateBoard from Assembly"/>
+    <ClickElement locatorType="xpath" locatorExpression="//button[@type='button']"/>
+	<Wait time="5000"/>
+    <SwitchToDefaultContent/>
+    <ClickElement locatorType="xpath" locatorExpression="//img[@src='images/iconActionSmallReturnToFacets.png']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//label[contains(text(),'Engineering BOM')]"/>
+    <switchToFrame name="content=>detailsDisplay=>portalDisplay=>ENCBOM"/>
+    <ClickElement locatorType="xpath" locatorExpression="//td[@id='ENCIndentedBOMEditAll']/img"/>
+    <SelectIndentedTableRow expand="false" id="IT1" criteria="level"/>
+	<ScrollToElement locatorType="id" locatorExpression="Description"/> -->
+	
+	
+	
+	
+	<!-- Scroll to Element When there are too many search option and ScrollBar goes smaller -->
+	<!-- This Scenario is for 22x -->
+	<GlobalSearch id="Search Object" type="All" searchtype="search"/>
+	<ClickElement locatorType="xpath" locatorExpression="//label[@id='switch-view-button']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[normalize-space()='Datagrid View']"/>
+<!-- 	<ClickElement locatorType="xpath" locatorExpression="//div[@class='show-more type-show-more']"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[normalize-space()='Preparation']"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='tagger-close fonticon fonticon-cancel']"/> -->
+	<ScrollToElement locatorType="xpath" locatorExpression="//div[contains(text(),'prd-70002171-00000413')]" direction ="DOWN" scrollarea="//*[@id='table']/div/div[5]/div/div[1]/div" isdynamic ="true"/>
+	<Wait time="5000"/>
+	
+	
+	
+	<!-- Scroll to Element in DashBoard -->
+    <!-- <setStartWindow />
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<SwitchToWindow/>
+	<Wait time="1000" />
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='wp-panel-button fonticon fonticon-menu new-dashboard-menu-open-btn inactive']"/>
+	<CreateDashboard input ="Test1"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="Requirements" appIndex="2"/>
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-header-icon ifwe-action-icon fonticon fonticon-pin clickable']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[@class='btn-primary btn btn-root']" />
+    <ClickElement locatorType="xpath" locatorExpression="//span[@class='fonticon fonticon-close new-dashboard-menu-close-btn']" />
+    <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENORETV_AP')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Create')]"/>
+    <ClickElement locatorType="xpath" locatorExpression="//div[@data-wux-menu-item-uid='2']"/>
+    <OpenNewToolbarInDashboard toolbarName="Edit" actionmenu="New Requirement" />
+    <OpenNewToolbarInDashboard toolbarName="Edit" actionmenu="New Requirement" />
+    <ClickElement locatorType="xpath" locatorExpression="//div[@cell-id='28']"/> 
+    <Wait time="5000"/>
+	<ScrollToElement locatorType="xpath" locatorExpression="//div[@cell-id='20']" />
+	<SwitchToStartWindow /> -->
+	
+	
+	<Logout/>   
+   
+</TestCase>
+

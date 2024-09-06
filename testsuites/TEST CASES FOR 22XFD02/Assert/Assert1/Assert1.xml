@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TestCase xmlns="https://www.steepgraph.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://www.steepgraph.com ../../../../resources/xsd/TestAutomationFramework.xsd">
+	<Login username="$csv{username}" password="$csv{password}"/>
+	<SwitchToDefaultContent/>
+	<OpenCompassApp quadrant="east" appname="3DDashboard" />
+	<Wait time="1000"/>
+	<SwitchToWindow />
+<!-- 	 <OpenCompassApp quadrant="east" appname="Component Request Administration" />
+    <Wait time="1000"/>
+	<SwitchToDefaultContent/>
+	<ClickElement locatorType="xpath" locatorExpression="//span[@class='pin-icon preview-icon ifwe-action-icon fonticon fonticon-pin clickable']" />
+    <ClickElement locatorType="xpath" locatorExpression="//button[normalize-space()='Add']" /> -->
+   
+     <ClickElement locatorType="xpath" locatorExpression="(//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable '])[1]" />
+     <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENXCRMA_AP')]"/>
+	 <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'New Component Request')]"/>
+	 <ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Component Introduction Request')]"/>
+	 <ClickElement locatorType="xpath" locatorExpression="//button[@id='createBtn']"/>
+	 <InputText locatorType="xpath" locatorExpression="//input[@placeholder='Enter title']" input="Part"/>
+	 <CheckElement locatorType="xpath" locatorExpression="//input[@class='form-control form-control-root disabled']" criteria="disabled"/>
+	 <Assert locatorExpression="//input[@class='form-control form-control-root disabled']" id="check" condition="=" criteria="text"  locatorType="xpath" highlight="true"/> 
+	 
+	 
+	 
+	 
+	 
+	<!--  <ClickElement locatorType="xpath" locatorExpression="(//span[@class='fullscreen-icon ifwe-action-icon fonticon fonticon-resize-fullscreen clickable '])[1]" />
+     <SwitchToFrame locatorType="xpath" locatorExpression="//iframe[contains(@src,'ENXCRMA_AP')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//div[contains(text(),'Request Templates')]"/>
+	<ClickElement locatorType="xpath" locatorExpression="//li[@id='createNPRTemplate']"/>
+	 <InputText locatorType="xpath" locatorExpression="//input[@id='input-1f8228']" input="Part"/>
+	 <CheckElement locatorType="xpath" locatorExpression="//ul[@class='select-choices form-control']" criteria="disabled"/>
+	<Assert locatorExpression="//ul[@class='select-choices form-control']" id="check" condition="=" criteria="text"  locatorType="xpath" highlight="true"/> -->
+	
+	
+	
+	
+	
+	
+	
+	</TestCase>
